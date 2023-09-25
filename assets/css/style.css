@@ -674,6 +674,10 @@ body::-webkit-scrollbar-thumb,
     @apply relative w-[60px] h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
   }
   /* Our work End */
+
+  .customer-slider .landscape {
+    @apply relative block w-full overflow-hidden pt-[443px]
+  }
 }
 
 /* Responsive CSS Start */
