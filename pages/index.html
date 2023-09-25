@@ -225,12 +225,9 @@
     <!-- Banner End -->
 
     <!-- Case study tabs Start -->
-    <section id="tabs-wrapper" class="casestudyTabs-Wrapper bg-Black lg:py-100 py-55 relative">
-        <div class="img absolute top-0 left-0 w-full h-full">
-            <img src="../assets/images/tabs-banner.jpg" class="w-full h-full object-cover lg:object-fill" alt="banner"/>
-        </div>
+    <section id="tabs-wrapper" class="casestudyTabs-Wrapper w-full bg-Black lg:py-100 py-55 relative bg-fixed bg-no-repeat bg-left-top bg-cover" style="background-image: url(../assets/images/tabs-banner.jpg);">
         <div class="container-fluid lg:pr-0">
-            <div class="tabs flex flex-wrap items-start justify-start m-0 p-0 lgscreen:w-full relative lg:-mx-30">
+            <div class="tabs flex flex-wrap items-start justify-start m-0 p-0 lgscreen:w-full relative gap-y-10 lg:-mx-30">
                 <div class="w-full lg:max-w-[33.333%] lg:px-30">
                     <ul class="tabs-nav mb-0">
                         <li>
@@ -288,7 +285,7 @@
                 <div class="w-full lg:max-w-[66.666667%] lg:px-30">
                     <div class="tabs-stage">
                         <div id="tab-1">
-                            <div class="flex flex-wrap m-0 p-0 lgscreen:w-full lg:-mx-6">
+                            <div class="flex flex-wrap m-0 p-0 lgscreen:w-full gap-y-10 lg:-mx-6">
                                 <div class="w-full lg:max-w-[50%] lg:px-6 relative">
                                     <div class="title title-White mb-5">
                                         <h2>
@@ -325,7 +322,7 @@
                                                             “IT-Heroes has largely improved the positioning of our stores using keywords, actively advised on the optimization of our new store.”
                                                         </em>
                                                     </div>
-                                                    <div class="flex lgscreen:flex-col lg:flex-wrap items-center lg:justify-between mb-30 last:mb-0">
+                                                    <div class="flex lgscreen:flex-col lg:flex-wrap items-start lg:justify-between mb-30 last:mb-0">
                                                         <div class="img">
                                                             <img src="../assets/images/drero.png" width="146" height="27" class="max-w-full h-auto block" alt="drero"/>
                                                         </div>
@@ -355,7 +352,7 @@
                                                             “IT-Heroes has largely improved the positioning of our stores using keywords, actively advised on the optimization of our new store.”
                                                         </em>
                                                     </div>
-                                                    <div class="flex lgscreen:flex-col lg:flex-wrap items-center lg:justify-between mb-30 last:mb-0">
+                                                    <div class="flex lgscreen:flex-col lg:flex-wrap items-start lg:justify-between mb-30 last:mb-0">
                                                         <div class="img">
                                                             <img src="../assets/images/drero.png" width="146" height="27" class="max-w-full h-auto block" alt="drero"/>
                                                         </div>
@@ -422,7 +419,7 @@
                                                             “IT-Heroes has largely improved the positioning of our stores using keywords, actively advised on the optimization of our new store.”
                                                         </em>
                                                     </div>
-                                                    <div class="flex lgscreen:flex-col lg:flex-wrap items-center lg:justify-between mb-30 last:mb-0">
+                                                    <div class="flex flex-wrap items-start lg:justify-between mb-30 last:mb-0">
                                                         <div class="img">
                                                             <img src="../assets/images/drero.png" width="146" height="27" class="max-w-full h-auto block" alt="drero"/>
                                                         </div>
@@ -452,7 +449,7 @@
                                                             “IT-Heroes has largely improved the positioning of our stores using keywords, actively advised on the optimization of our new store.”
                                                         </em>
                                                     </div>
-                                                    <div class="flex lgscreen:flex-col lg:flex-wrap items-center lg:justify-between mb-30 last:mb-0">
+                                                    <div class="flex flex-wrap items-start lg:justify-between mb-30 last:mb-0">
                                                         <div class="img">
                                                             <img src="../assets/images/drero.png" width="146" height="27" class="max-w-full h-auto block" alt="drero"/>
                                                         </div>
@@ -489,7 +486,7 @@
     <!-- Case study tabs End -->
 
     <!-- Zigzag image with content Start -->
-    <section class="zigzag-img-content lg:py-100 py-55 bg-White">
+    <section class="zigzag-img-content bg-ow-pattern lg:py-100 py-55 bg-White relative">
         <div class="container-fluid">
             <div class="flex flex-wrap m-0 p-0 items-center justify-center lgscreen:w-full gap-y-10 lg:-mx-30">
                 <div class="w-full lg:w-6/12 lg:px-30 lg:order-1 order-1">
@@ -500,8 +497,8 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-6/12 lg:px-30 lg:order-2 order-2">
-                    <div class="title title-Black mb-20 pb-15 last:mb-0">
-                        <h2 class="pattern capitalize">
+                    <div class="title title-Black divider-orange">
+                        <h2 class="pattern capitalize tracking-20">
                             About <span>Semguru</span>
                         </h2>
                     </div>
@@ -523,6 +520,116 @@
         </div>
     </section>
     <!-- Zigzag image with content End -->
+
+    <!-- Our work Start -->
+    <section class="ourwork-wrapper bg-Black lg:py-100 py-55 relative bg-fixed bg-center bg-cover bg-no-repeat" style="background-image: url(../assets/images/ourwork-banner.jpg);">
+        <div class="container-fluid mb-55 last:mb-0">
+            <div class="flex flex-wrap items-start justify-between w-full m-0 p-0">
+                <div class="title title-White !w-auto">
+                    <h2 class="pattern capitalize tracking-20">
+                        Our <span>Work</span>
+                    </h2>
+                </div>
+                <div class="flex flex-wrap items-start m-0 p-0 relative gap-3">
+                    <div class="ourwork-prev swiper-button-prev hidden lg:flex">
+                        <img src="../assets/images/left-arrow.png" class="max-w-full h-auto block" width="22" height="22" alt="Prev"/>
+                    </div>
+                    <div class="ourwork-next swiper-button-next hidden lg:flex">
+                        <img src="../assets/images/right-arrow.png" class="max-w-full h-auto block" width="22" height="22" alt="Next"/>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid !pr-0 mb-55 last:mb-0">
+            <div class="swiper ourwork-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img landscape mb-30">
+                            <img src="../assets/images/work1.jpg" width="598" height="465" class="absolute top-0 left-0 w-full h-full object-cover" alt="Arpideas">
+                            <div class="overlay absolute bottom-30 left-20">
+                                <img src="../assets/images/arpideas.png" class="max-w-full h-auto block" alt="arpideas">
+                            </div>
+                        </div>
+                        <div class="title title-White mb-5 last:mb-0">
+                            <h3>
+                                Arpideas
+                            </h3>
+                        </div>
+                        <div class="content white">
+                            <p>
+                                Get to know the proposed cooperation models and take advantage of our knowledge and experience in working with Microsoft technologies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img landscape mb-30">
+                            <img src="../assets/images/work2.jpg" width="598" height="465" class="absolute top-0 left-0 w-full h-full object-cover" alt="Instytut Mikroekologii">
+                            <div class="overlay absolute  bottom-30 left-20">
+                                <img src="../assets/images/lnstytut-mikroekologii.png" class="max-w-full h-auto block" alt="Instytut Mikroekologii">
+                            </div>
+                        </div>
+                        <div class="title title-White mb-5 last:mb-0">
+                            <h3>
+                                Instytut Mikroekologii
+                            </h3>
+                        </div>
+                        <div class="content white">
+                            <p>
+                                Get to know the proposed cooperation models and take advantage of our knowledge and experience in working with Microsoft technologies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img landscape mb-30">
+                            <img src="../assets/images/work3.jpg" width="598" height="465" class="absolute top-0 left-0 w-full h-full object-cover" alt="Art & Beauty">
+                            <div class="overlay absolute  bottom-30 left-20">
+                                <img src="../assets/images/artbeauty.png" class="max-w-full h-auto block" alt="Art & Beauty">
+                            </div>
+                        </div>
+                        <div class="title title-White mb-5 last:mb-0">
+                            <h3>
+                                Art & Beauty
+                            </h3>
+                        </div>
+                        <div class="content white">
+                            <p>
+                                Get to know the proposed cooperation models and take advantage of our knowledge and experience in working with Microsoft technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="flex flex-wrap items-center justify-center m-0 p-0 w-full">
+                <div class="btn-custom btn-w-pattern flex justify-center lg:justify-start relative z-1">
+                    <a href="javascript:void(0);" class="btn btn-OrangeWhite">
+                        View All Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our work End -->
+
+    <!-- Customer Start -->
+    <section class="customer-wrapper lg:py-100 py-55 relative bg-fixed bg-center bg-cover bg-no-repeat" style="background-image: url(../assets/images/customer-banner.jpg);">
+        <div class="container-fluid">
+            <div class="flex flex-wrap items-center justify-center text-center m-0 p-0 mb-55 w-full">
+                <div class="title title-White divider-white divider-center">
+                    <h2 class="pattern capitalize tracking-20">
+                        Customer <span>Reviews</span> 
+                    </h2>
+                </div>
+                <div class="content white">
+                    <p>
+                        You haven't had any specialists yet. We will build your business so that it achieves the best results.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer End -->
 
     <!-- footer Start -->
     <!-- footer End -->

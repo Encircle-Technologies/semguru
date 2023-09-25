@@ -221,7 +221,15 @@ body::-webkit-scrollbar-thumb,
     @apply text-White font-700;
   }
   .title-White span {
-    @apply text-White text-24 lg:text-32 leading-[120%] capitalize font-300;
+    @apply text-Orange;
+  }
+
+  .title-White .pattern {
+    @apply relative inline-block;
+  }
+  .title-White .pattern:before {
+    content: "";
+    @apply absolute -top-[5px] -right-[15px] w-[13px] h-[13px] lg:w-[26px] lg:h-[26px] border-0 border-t-[4px] border-r-[4px] lg:border-t-[8px] lg:border-r-[8px] border-solid border-Orange
   }
 
   .title-Black h1,
@@ -235,6 +243,15 @@ body::-webkit-scrollbar-thumb,
   .title-Black span {
     @apply text-Orange;
   }
+
+  .title-Black .pattern {
+    @apply relative inline-block;
+  }
+  .title-Black .pattern:before {
+    content: "";
+    @apply absolute -top-[5px] -right-[15px] w-[13px] h-[13px] lg:w-[26px] lg:h-[26px] border-0 border-t-[4px] border-r-[4px] lg:border-t-[8px] lg:border-r-[8px] border-solid border-Orange
+  }
+
   span.small {
     @apply text-Orange uppercase font-Poppins font-500 tracking-20 mb-25 last:mb-0 block;
   }
@@ -248,7 +265,7 @@ body::-webkit-scrollbar-thumb,
     @apply text-Font;
   }
   .title-Fonts span {
-    @apply text-Orange text-24 lg:text-32 leading-[120%] capitalize font-300;
+    @apply text-Orange;
   }
 
   .white p,
@@ -306,6 +323,45 @@ body::-webkit-scrollbar-thumb,
   .left-border:before {
     content: "";
     @apply lgscreen:hidden block absolute top-0 xl:-left-[55px] lg:-left-[40px] w-[1px] h-full bg-Orange;
+  }
+  .bg-ow-pattern {
+    @apply relative;
+  }
+  .bg-ow-pattern:before {
+    content: "";
+    @apply absolute -bottom-[105px] right-[5%] lg:w-[203px] lg:h-[177px] bg-[url(./../../images/bg-ow-pattern.png)] bg-center bg-cover z-1;
+  }
+
+  .divider-black {
+    @apply relative;
+  }
+  .divider-black:before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-[100px] h-[4px] bg-Orange block;
+  }
+  .divider-orange {
+    @apply relative mb-20 pb-15 last:mb-0;
+  }
+  .divider-orange:before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-[100px] h-[4px] bg-Orange block;
+  }
+  .divider-black {
+    @apply relative mb-20 pb-15 last:mb-0;
+  }
+  .divider-black:before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-[100px] h-[4px] bg-Black block;
+  }
+  .divider-white {
+    @apply relative mb-20 pb-15 last:mb-0;
+  }
+  .divider-white:before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-[100px] h-[4px] bg-White block;
+  }
+  .divider-center:before {
+    @apply left-50_per translate-x-minus_50;
   }
 }
 
@@ -582,6 +638,9 @@ body::-webkit-scrollbar-thumb,
   .casestudyTabs-Wrapper .clientsay_slider .quote .content em {
     @apply text-[15px] leading-[25px] font-Poppins font-400 tracking-20 text-White m-0 p-0 block;
   }
+  .casestudyTabs-Wrapper .clientsay_slider .swiper-pagination {
+    @apply lgscreen:relative lgscreen:inset-0 lgscreen:justify-center lgscreen:mt-25;
+  }
   /* casestudyTabs-Wrapper End */
   
   /* zigzag-img-content Start */
@@ -595,21 +654,26 @@ body::-webkit-scrollbar-thumb,
     content: "";
     @apply absolute -top-[21px] -right-[20px] w-[231px] h-[301px] border-0 border-solid border-[#ffdec5] border-t-[10px] border-r-[10px] drop-shadow-big-bk-shadow z-1;
   }
-  .title-Black .pattern {
-    @apply relative inline-block;
-  }
-  .title-Black .pattern:before {
-    content: "";
-    @apply absolute -top-[5px] -right-[15px] w-[26px] h-[26px] border-0 border-t-[10px] border-solid border-Orange border-r-[10px]
-  }
-  .zigzag-img-content .title {
-    @apply relative;
-  }
-  .zigzag-img-content .title:before {
-    content: "";
-    @apply absolute bottom-0 left-0 w-[100px] h-[4px] bg-Orange block;
-  }
+  
+  
   /* zigzag-img-content End */
+
+  /* Our work Start */
+  .ourwork-wrapper .ourwork-slider .landscape {
+    @apply block relative overflow-hidden w-full pt-[77.76%];
+  }
+  .ourwork-wrapper .ourwork-next {
+    @apply relative w-[60px] h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
+  }
+  .ourwork-wrapper .ourwork-next img,
+  .ourwork-wrapper .ourwork-prev img {
+    @apply invert;
+  }
+
+  .ourwork-wrapper .ourwork-prev {
+    @apply relative w-[60px] h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
+  }
+  /* Our work End */
 }
 
 /* Responsive CSS Start */

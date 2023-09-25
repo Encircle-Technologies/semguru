@@ -28,10 +28,10 @@ $(document).ready(function ($) {
             loop: true,
             speed: 2000,
             effect: "fade",
-            // autoplay: {
-            //     delay: 4500,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".hero-pagination",
                 clickable: true,
@@ -51,6 +51,41 @@ $(document).ready(function ($) {
             pagination: {
               el: ".swiper-pagination",
               clickable: true,
+            },
+        });
+    }
+    
+    if ($('.ourwork-wrapper').length) {
+        var ourworkSlider = new Swiper(".ourwork-slider", {
+            slidesPerView: 2.5,
+            spaceBetween: 50,
+            centeredSlides: false,
+            speed: 2000,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".ourwork-next",
+                prevEl: ".ourwork-prev",
+            },
+            breakpoints: {
+                "320": {
+                  slidesPerView: 1.5,
+                  spaceBetween: 10,
+                },
+                "768": {
+                  slidesPerView: 1.8,
+                  spaceBetween: 20,
+                },
+                "1024": {
+                  slidesPerView: 2.5,
+                  spaceBetween: 40,
+                },
+                "1200": {
+                  slidesPerView: 2.5,
+                  spaceBetween: 50,
+                },
             },
         });
     }

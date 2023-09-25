@@ -8,11 +8,32 @@
 }
 
 @layer components {
-  
+  .header.header_static {
+    @apply relative;     
+  }
+  .header.header_static.is-sticky {
+    @apply fixed;   
+  } 
 }
 
 @layer utilities {
- 
+/* Breadcrumbs Banner Start */
+.breadcrunb-banner__image--main {
+    @apply relative pt-[62.50%];                
+  }
+  .breadcrunb-banner__image--main img {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+  }
+  .breadcrunb-banner__title h1 {
+    @apply text-[42px] lg:text-[52px] xl:text-[68px] xl:leading-[75px] leading-[100%];
+  }    
+  .breadcrunb-banner__desc p {
+    @apply font-Inter text-White lg:text-18 lg:leading-[30px] text-[14px] leading-[20px] font-400 tracking-20 not-italic relative block mb-20 last:mb-0;
+  }                                                                
+  .breadcrunb-banner__contentmain::before {
+    @apply content-[''] absolute lg:top-[-16px] top-10 lg:right-[-16px] right-0 border-0 lg:w-[59px] w-[39px] lg:h-[59px] h-[39px] lg:border-t-[8px] border-t-[5px] lg:border-r-[8px] border-r-[5px] border-solid border-Orange z-1;                                               
+  }                    
+/* Breadcrumbs Banner End */
 }
 
 /* Responsive CSS Start */

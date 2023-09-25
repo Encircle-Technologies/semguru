@@ -35,15 +35,6 @@ module.exports = {
             '2': '2 2 0%',
             'max-auto': '0 0 auto',
         },
-        // container: {
-        //     center: true,
-        //     padding: '15px',
-        //     xxl: '1250px',
-        //     xl: '1140px',
-        //     lg: '940px',
-        //     md: '720px',
-        //     sm: '600px',
-        // },
         zIndex: {
             '1_minus': '-1',
             0: 0,
