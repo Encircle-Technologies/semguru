@@ -95,10 +95,10 @@ $(document).ready(function ($) {
             slidesPerView: 1,
             spaceBetween: 0,
             speed: 2000,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             navigation: {
                 nextEl: ".customer-next",
                 prevEl: ".customer-prev",

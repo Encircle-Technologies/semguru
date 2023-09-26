@@ -241,6 +241,7 @@ module.exports = {
         backgroundImage: theme => ({
             none: 'none',
             'tabs_gradient': 'linear-gradient(90deg, rgba(255,255,255,0.05) 20%, rgba(25,25,25,0) 100%)',
+            'banner_gradient': 'linear-gradient(0deg, rgba(252,138,49,0.08) 0%, rgba(255,255,255,0) 65%)',
         }),
         backgroundPosition: {
             'bgcp':'50% 80%',

@@ -134,92 +134,69 @@
     <!-- Banner Start -->
     <section class="herobanner-wrapper h-[910px]">
         <div class="bg-White flex flex-col justify-center items-center h-full w-full relative">
-            <div class="img absolute bottom-0 right-0">
-                <img src="../assets/images/home-banner.jpg" class="max-w-full h-auto block" alt="graphics">
+            <div class="swiper hero-slider w-full h-full block absolute top-0 left-0">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-banner_gradient h-full relative">
+                        <div class="img h-full">
+                            <img src="../assets/images/home-banner1.png" class="hidden lg:block w-full h-full object-contain" alt="graphics">
+                            <img src="../assets/images/home-mob-banner1.png" class="block lg:hidden w-full h-full object-contain object-bottom" alt="graphics">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-banner_gradient h-full relative">
+                        <div class="img h-full">
+                            <img src="../assets/images/home-banner2.png" class="hidden lg:block w-full h-full object-contain" alt="graphics">
+                            <img src="../assets/images/home-mob-banner2.png" class="block lg:hidden w-full h-full object-contain object-bottom" alt="graphics">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-pagination swiper-pagination xlscreen:mb-30 flex lgscreen:flex-wrap xl:flex-col !justify-center items-center gap-2 xlscreen:!w-full"></div>
             </div>
             <div class="bg-move">
                 <span></span>
             </div>
             <div class="container-fluid">
-                <div class="swiper hero-slider w-full h-auto block relative mb-40 lg:mb-80">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide h-auto relative">
-                            <div class="flex flex-wrap items-center justify-start m-0 p-0 w-full relative">
-                                <div class="w-full lg:w-6/12">
-                                    <div class="banner-details text-center lg:text-left w-full relative z-1">
-                                        <div class="title title-Black">
-                                            <span class="small">
-                                                Digital Marketing Company
-                                            </span>
-                                            <h1 class="pattern big capitalize">
-                                                <span>1500%</span> Rose
-                                            </h1>
-                                            <h3 class="capitalize">
-                                                More Conversions
-                                            </h3>                                    
-                                        </div>
-                                        <div class="divider block mx-auto lg:mx-0 w-full max-w-[152px] h-[4px] bg-Orange mt-18 mb-25 xl:translate-x-[-15px]"></div>
-                                        <div class="content black mb-40 last:mb-0">
-                                            <p>
-                                                Semguru Read the story of Drerowery & find out what<br/> You can gain thanks to an optimally conducted SEO and<br/> Internet marketing campaign. 
-                                            </p>
-                                        </div>
-                                        <div class="btn-custom btn-bk-pattern flex justify-center lg:justify-start relative z-1">
-                                            <a href="javascript:void(0);" class="btn btn-Orange">
-                                                See Case Studies
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="flex flex-wrap items-center justify-start m-0 p-0 w-full relative">
+                    <div class="w-full lg:w-6/12">
+                        <div class="banner-details text-center lg:text-left w-full relative z-1 mb-40 lg:mb-80">
+                            <div class="title title-Black">
+                                <span class="small">
+                                    Digital Marketing Company
+                                </span>
+                                <h1 class="pattern big capitalize">
+                                    <span>1500%</span> Rose
+                                </h1>
+                                <h3 class="capitalize">
+                                    More Conversions
+                                </h3>                                    
+                            </div>
+                            <div class="divider block mx-auto lg:mx-0 w-full max-w-[152px] h-[4px] bg-Orange mt-18 mb-25 xl:translate-x-[-15px]"></div>
+                            <div class="content black mb-40 last:mb-0">
+                                <p>
+                                    Semguru Read the story of Drerowery & find out what<br/> You can gain thanks to an optimally conducted SEO and<br/> Internet marketing campaign. 
+                                </p>
+                            </div>
+                            <div class="btn-custom btn-bk-pattern flex justify-center lg:justify-start relative z-1">
+                                <a href="javascript:void(0);" class="btn btn-Orange">
+                                    See Case Studies
+                                </a>
                             </div>
                         </div>
-                        <div class="swiper-slide h-auto relative">
-                            <div class="flex flex-wrap items-center justify-start m-0 p-0 w-full relative">
-                                <div class="w-full lg:w-6/12">
-                                    <div class="banner-details text-center lg:text-left w-full relative z-1">
-                                        <div class="title title-Black">
-                                            <span class="small">
-                                                Digital Marketing Company
-                                            </span>
-                                            <h1 class="pattern big capitalize">
-                                                <span>15%</span> Rose
-                                            </h1>
-                                            <h3 class="capitalize">
-                                                More Conversions
-                                            </h3>                                    
-                                        </div>
-                                        <div class="divider block mx-auto lg:mx-0 w-full max-w-[152px] h-[4px] bg-Orange mt-18 mb-25 xl:translate-x-[-15px]"></div>
-                                        <div class="content black mb-40 last:mb-0">
-                                            <p>
-                                                Semguru Read the story of Drerowery & find out what<br/> You can gain thanks to an optimally conducted SEO and<br/> Internet marketing campaign. 
-                                            </p>
-                                        </div>
-                                        <div class="btn-custom btn-bk-pattern flex justify-center lg:justify-start relative z-1">
-                                            <a href="javascript:void(0);" class="btn btn-Orange">
-                                                See Case Studies
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="javascript:void(0);" class="scroll-down lgscreen:mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 25">
+                                <path class="arrow" d="M6,22.5C6,22.4,6,22.4,6,22.5c0.7-0.8,1.4-1.5,2.1-2.2c0.1-0.1,0.1-0.1,0.2-0.1c0.1,0,0.2,0.2,0.1,0.3c0,0,0,0,0,0
+                                        c-0.7,0.8-1.5,1.5-2.2,2.3C6,23,6,23,5.8,22.8c-0.8-0.8-1.5-1.5-2.3-2.3c-0.1-0.1-0.1-0.1-0.1-0.2c0-0.1,0.2-0.2,0.3-0.1
+                                        c0,0,0,0,0.1,0.1C4.6,21,5.3,21.7,6,22.5C6,22.4,6,22.4,6,22.5z"/>
+                                <path class="arrow" d="M6,24C6,24,6,24,6,24c0.7-0.8,1.4-1.5,2.1-2.2c0.1-0.1,0.1-0.1,0.2-0.1c0.1,0,0.2,0.2,0.1,0.3c0,0,0,0,0,0
+                                    c-0.7,0.8-1.5,1.5-2.2,2.3c-0.1,0.1-0.2,0.1-0.3,0c-0.8-0.8-1.5-1.5-2.3-2.3c-0.1-0.1-0.1-0.1-0.1-0.2c0-0.1,0.2-0.2,0.3-0.1
+                                    c0,0,0,0,0.1,0.1C4.6,22.6,5.3,23.3,6,24C6,24,6,24,6,24z"/>
+                                <path d="M6,19.2c-3,0-5.4-2.4-5.4-5.4V5.5c0-3,2.4-5.4,5.4-5.4s5.4,2.4,5.4,5.4v8.3C11.4,16.8,9,19.2,6,19.2z M6,0.9
+                                    C3.5,0.9,1.4,3,1.4,5.5v8.3c0,2.5,2.1,4.6,4.6,4.6c2.5,0,4.6-2.1,4.6-4.6V5.5C10.6,3,8.5,0.9,6,0.9z"/>
+                                <path class="line" d="M6,9.9c-0.1,0-0.2-0.1-0.2-0.2V3.6c0-0.1,0.1-0.2,0.2-0.2s0.2,0.1,0.2,0.2v6.1C6.2,9.8,6.1,9.9,6,9.9z"/>
+                            </svg>
+                        </a>
                     </div>
-                </div>                
-                <a href="#tabs-wrapper" class="scroll-down lgscreen:mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 25">
-                        <path class="arrow" d="M6,22.5C6,22.4,6,22.4,6,22.5c0.7-0.8,1.4-1.5,2.1-2.2c0.1-0.1,0.1-0.1,0.2-0.1c0.1,0,0.2,0.2,0.1,0.3c0,0,0,0,0,0
-                                c-0.7,0.8-1.5,1.5-2.2,2.3C6,23,6,23,5.8,22.8c-0.8-0.8-1.5-1.5-2.3-2.3c-0.1-0.1-0.1-0.1-0.1-0.2c0-0.1,0.2-0.2,0.3-0.1
-                                c0,0,0,0,0.1,0.1C4.6,21,5.3,21.7,6,22.5C6,22.4,6,22.4,6,22.5z"/>
-                        <path class="arrow" d="M6,24C6,24,6,24,6,24c0.7-0.8,1.4-1.5,2.1-2.2c0.1-0.1,0.1-0.1,0.2-0.1c0.1,0,0.2,0.2,0.1,0.3c0,0,0,0,0,0
-                            c-0.7,0.8-1.5,1.5-2.2,2.3c-0.1,0.1-0.2,0.1-0.3,0c-0.8-0.8-1.5-1.5-2.3-2.3c-0.1-0.1-0.1-0.1-0.1-0.2c0-0.1,0.2-0.2,0.3-0.1
-                            c0,0,0,0,0.1,0.1C4.6,22.6,5.3,23.3,6,24C6,24,6,24,6,24z"/>
-                        <path d="M6,19.2c-3,0-5.4-2.4-5.4-5.4V5.5c0-3,2.4-5.4,5.4-5.4s5.4,2.4,5.4,5.4v8.3C11.4,16.8,9,19.2,6,19.2z M6,0.9
-                            C3.5,0.9,1.4,3,1.4,5.5v8.3c0,2.5,2.1,4.6,4.6,4.6c2.5,0,4.6-2.1,4.6-4.6V5.5C10.6,3,8.5,0.9,6,0.9z"/>
-                        <path class="line" d="M6,9.9c-0.1,0-0.2-0.1-0.2-0.2V3.6c0-0.1,0.1-0.2,0.2-0.2s0.2,0.1,0.2,0.2v6.1C6.2,9.8,6.1,9.9,6,9.9z"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="hero-pagination swiper-pagination flex lgscreen:flex-wrap xl:flex-col !justify-center items-center gap-2 xlscreen:!w-full"></div>
+                </div>
+            </div>            
         </div>
     </section>
     <!-- Banner End -->
@@ -382,7 +359,7 @@
                             </div>
                         </div>
                         <div id="tab-2">
-                            <div class="flex flex-wrap m-0 p-0 lgscreen:w-full lg:-mx-6">
+                            <div class="flex flex-wrap m-0 p-0 lgscreen:w-full gap-y-10 lg:-mx-6">
                                 <div class="w-full lg:max-w-[50%] lg:px-6 relative">
                                     <div class="title title-White mb-5">
                                         <h2>
@@ -546,8 +523,8 @@
                     <div class="swiper-slide">
                         <div class="img landscape mb-30">
                             <img src="../assets/images/work1.jpg" width="598" height="465" class="absolute top-0 left-0 w-full h-full object-cover" alt="Arpideas">
-                            <div class="overlay absolute bottom-30 left-20">
-                                <img src="../assets/images/arpideas.png" class="max-w-full h-auto block" alt="arpideas">
+                            <div class="overlay absolute bottom-0 left-0 w-full px-20 py-30">
+                                <img src="../assets/images/arpideas.png" class="mdscreen:max-w-[50%] max-w-full h-auto block" alt="arpideas">
                             </div>
                         </div>
                         <div class="title title-White mb-5 last:mb-0">
@@ -564,8 +541,8 @@
                     <div class="swiper-slide">
                         <div class="img landscape mb-30">
                             <img src="../assets/images/work2.jpg" width="598" height="465" class="absolute top-0 left-0 w-full h-full object-cover" alt="Instytut Mikroekologii">
-                            <div class="overlay absolute  bottom-30 left-20">
-                                <img src="../assets/images/lnstytut-mikroekologii.png" class="max-w-full h-auto block" alt="Instytut Mikroekologii">
+                            <div class="overlay absolute bottom-0 left-0 w-full px-20 py-30">
+                                <img src="../assets/images/lnstytut-mikroekologii.png" class="mdscreen:max-w-[50%] max-w-full h-auto block" alt="Instytut Mikroekologii">
                             </div>
                         </div>
                         <div class="title title-White mb-5 last:mb-0">
@@ -582,8 +559,8 @@
                     <div class="swiper-slide">
                         <div class="img landscape mb-30">
                             <img src="../assets/images/work3.jpg" width="598" height="465" class="absolute top-0 left-0 w-full h-full object-cover" alt="Art & Beauty">
-                            <div class="overlay absolute  bottom-30 left-20">
-                                <img src="../assets/images/artbeauty.png" class="max-w-full h-auto block" alt="Art & Beauty">
+                            <div class="overlay absolute bottom-0 left-0 w-full px-20 py-30">
+                                <img src="../assets/images/artbeauty.png" class="mdscreen:max-w-[50%] max-w-full h-auto block" alt="Art & Beauty">
                             </div>
                         </div>
                         <div class="title title-White mb-5 last:mb-0">
@@ -597,6 +574,14 @@
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="lg:hidden flex flex-wrap items-start justify-center mt-40 m-0 p-0 relative gap-3">
+                    <div class="ourwork-prev swiper-button-prev">
+                        <img src="../assets/images/left-arrow.png" class="max-w-full h-auto block" width="22" height="22" alt="Prev"/>
+                    </div>
+                    <div class="ourwork-next swiper-button-next">
+                        <img src="../assets/images/right-arrow.png" class="max-w-full h-auto block" width="22" height="22" alt="Next"/>
+                    </div>                    
                 </div>
             </div>
         </div>

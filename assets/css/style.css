@@ -479,6 +479,9 @@ body::-webkit-scrollbar-thumb,
   .herobanner-wrapper {
     @apply flex flex-col items-center justify-center w-full m-0 p-0 relative;
   }
+  .herobanner-wrapper .content p br {
+    @apply lgscreen:hidden
+  }
   .banner-details .pattern {
     @apply inline-block relative;
   }
@@ -679,15 +682,15 @@ body::-webkit-scrollbar-thumb,
     @apply block relative overflow-hidden w-full pt-[77.76%];
   }
   .ourwork-wrapper .ourwork-next {
-    @apply relative w-[60px] h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
+    @apply relative w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
   }
   .ourwork-wrapper .ourwork-next img,
   .ourwork-wrapper .ourwork-prev img {
-    @apply invert;
+    @apply invert lgscreen:w-[14px];
   }
 
   .ourwork-wrapper .ourwork-prev {
-    @apply relative w-[60px] h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
+    @apply relative w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] inset-0 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
   }
   /* Our work End */
 
