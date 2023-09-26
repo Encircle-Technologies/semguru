@@ -159,6 +159,32 @@ $(document).ready(function ($) {
             $('.contact-form').toggle('slow');
         });
     }
+
+    // Scroll down
+    if ($(".herobanner-wrapper").length) {
+        $('.scroll-down').click (function() {
+            $('html, body').animate({scrollTop: $('section.casestudyTabs-Wrapper').offset().top -95 }, '500');
+            return false;
+        });
+    }
+
+    // Back to Top
+    if ($(".backto_top").length) {
+        var btn = $('#button');
+
+        $(window).scroll(function() {
+        if ($(window).scrollTop() > 1500) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '500');
+        });
+    }
     
 });
 

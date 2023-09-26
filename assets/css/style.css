@@ -771,10 +771,10 @@ body::-webkit-scrollbar-thumb,
   }
   .team-grid-wrapper .card .overlay {
     @apply translate-y-[100%] justify-center text-center border-0 border-b-[3px] border-solid border-Orange;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%)
   }
   .team-grid-wrapper .card:hover .overlay {
-    @apply translate-y-0;
-    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%)
+    @apply translate-y-0;    
   }
   .team-grid-wrapper .card .avatar-profile h4 {
     @apply font-Poppins font-700 text-White text-30 leading-[1] tracking-30 capitalize m-0 p-0
@@ -813,6 +813,91 @@ body::-webkit-scrollbar-thumb,
     @apply lg:absolute lg:top-0 lg:left-0;
   }
   /* Get in touch End */
+
+  /* Footer Start */
+  .footer .footer-top .social-media li a {
+    @apply flex flex-col items-center justify-center w-[46px] h-[46px] bg-transparent border-1 border-solid border-White rounded-[35px] opacity-60 duration-300 delay-150 ease-linear hover:bg-Orange hover:opacity-100 hover:border-transparent;
+  }
+  .footer .footer-top .social-media li a img {
+    @apply invert duration-300 delay-150 ease-linear
+  }
+  .footer .footer-top .footer-menu .title h5,
+  .footer .footer-top .footer-info .title h5 {
+    @apply text-22 relative mb-20 pb-20 inline-block;
+  }
+  .footer .footer-top .footer-menu .title h5:before,
+  .footer .footer-top .footer-info .title h5:before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-White opacity-30;
+  }
+  .footer .footer-top .footer-menu .title h5:after,
+  .footer .footer-top .footer-info .title h5:after {
+    content: "";
+    @apply absolute -bottom-[0.3px] left-0 w-full max-w-[50px] h-[3px] bg-White z-1;
+  }
+  .footer .footer-top .footer-menu ul,
+  .footer .footer-top .footer-info ul {
+    @apply flex flex-col items-start justify-start m-0 p-0 w-full gap-5
+  }
+  .footer .footer-top .footer-menu ul li a {
+    @apply font-Roboto font-300 text-20 text-White m-0 p-0 capitalize duration-300 delay-150 ease-linear hover:text-Orange;
+  }
+  .footer .footer-top .footer-info ul li {
+    @apply flex flex-row items-start justify-start gap-3 text-20 leading-[150%] font-Roboto font-300 text-White m-0 p-0 w-full;
+  }
+  .footer .footer-top .footer-info ul li span,
+  .footer .footer-top .footer-info ul li a {
+    @apply w-full max-w-[calc(100%_-_28px)]
+  }
+  .footer .footer-top .footer-info ul li:nth-child(2) .img {
+    @apply mt-[8px]
+  }
+  .footer .footer-top .footer-info ul li:nth-child(3) .img {
+    @apply mt-[11px]
+  }
+  .footer .footer-top .footer-info ul li:first-child .img {
+    @apply mt-10;
+  }
+  .footer .footer-top .footer-info ul li .img {
+    @apply w-[16px];
+  }
+  .footer .footer-top .footer-info ul li .img img {
+    @apply invert;
+  }
+  .footer .footer-top .footer-info ul li a {
+    @apply text-20 leading-[150%] font-Roboto font-300 text-White m-0 p-0 w-full duration-300 delay-150 ease-linear hover:text-Orange;
+  }
+  .footer .footer-top .footer-info ul li:last-child a {
+    @apply text-24 font-500
+  }
+  .footer .footer-bottom .copyright p {
+    @apply font-Roboto font-300 text-18 leading-26 text-White m-0 p-0 tracking-20
+  }
+  .footer .footer-bottom .footer-btm-menu li,
+  .footer .footer-bottom .footer-btm-menu li a {
+    @apply font-Roboto font-300 text-18 leading-26 text-White m-0 p-0 tracking-20 capitalize duration-300 delay-150 ease-linear
+  }
+  .footer .footer-bottom .footer-btm-menu li a:hover {
+    @apply text-Orange
+  }
+  /* Footer End */
+
+  /* Back to Top Start */
+  .backto_top #button {
+    @apply inline-block bg-transparent w-50 h-50 text-center fixed bottom-30 right-40 opacity-0 invisible z-10 duration-300 delay-150 ease-linear
+  }
+  .backto_top #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .backto_top #button img {
+    @apply invert opacity-50;
+  }
+  .backto_top #button:hover img {
+    @apply opacity-100;
+    filter: invert(71%) sepia(33%) saturate(5152%) hue-rotate(338deg) brightness(103%) contrast(98%);
+  }
+  /* Back to Top End */
 }
 
 /* Responsive CSS Start */

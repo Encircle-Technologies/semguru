@@ -82,31 +82,34 @@
 
 /* About Zigzag Start */
 .aboutzigzag__imagegrid::before {
-    @apply content-[''] absolute bottom-50 left-0 lg:w-[304px] w-[204px] xl2:h-[454px] lg:h-[284px] h-[254px] bg-transparent border-2 border-solid border-White;        
+    @apply content-[''] absolute sm:bottom-50 bottom-30 sm:left-0 left-10 lg:w-[304px] w-[204px] xl2:h-[454px] lg:h-[284px] h-[254px] bg-transparent border-2 border-solid border-White;                   
 }                                  
 .aboutzigzag__imagebig--inner {
-    @apply relative pt-[101.10%];
+    @apply relative pt-[101.10%] z-1;
 }
 .aboutzigzag__imagebig--inner img {
     @apply absolute top-0 left-0 w-full h-full object-cover;                  
 }
 .aboutzigzag__imagebig--inner::before {
-    @apply content-[''] absolute -top-[10px] -right-[10px] w-[73px] h-[73px] lg:w-[146px] lg:h-[146px] border-0 border-solid border-White border-t-[20px] border-r-[20px] lg:border-t-[40px] lg:border-r-[40px] drop-shadow-big_w_orange_shadow z-1;        
+    @apply content-[''] absolute -top-[10px] -right-[10px] w-[73px] h-[73px] lg:w-[146px] lg:h-[146px] border-0 border-solid border-White border-t-[20px] border-r-[20px] xxl:border-t-[40px] xxl:border-r-[40px] drop-shadow-big_w_orange_shadow z-1;              
 }
 .aboutzigzag__imagesmall {
     @apply absolute bottom-0 right-0;  
 }
 .aboutzigzag__imagesmall--inner {
-    @apply p-20 bg-Orange;    
+    @apply sm:p-20 p-10 bg-Orange relative z-1;                
 }
 .aboutzigzag__imagesmall--inner img {
     @apply xl2:max-w-[250px] max-w-[180px] xl2:max-h-[250px] max-h-[180px] xl2:h-[250px] h-[180px] object-cover;                     
 }                   
 .aboutzigzag__pattern {
-    @apply absolute top-50_per translate-y-minus_50 right-0 w-full;            
-}
+    @apply absolute top-[42%] translate-y-minus_50 right-0 w-full;            
+}        
 .aboutzigzag__pattern img {
     @apply object-contain lg:max-w-[56px] max-w-[36px] w-full mr-0 ml-auto;          
+}
+.aboutzigzag .title-White .pattern::before {
+    @apply content-[''] border-White;           
 }
 /* About Zigzag End */
 }
