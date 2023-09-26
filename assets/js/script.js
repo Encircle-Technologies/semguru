@@ -90,6 +90,22 @@ $(document).ready(function ($) {
         });
     }
 
+    if ($('.customer-wrapper').length) {
+        var customerSlider = new Swiper(".customer-slider", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 2000,
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false
+            // },
+            navigation: {
+                nextEl: ".customer-next",
+                prevEl: ".customer-prev",
+            },
+        });
+    }
+
     // Tabs 
     if ($('.casestudyTabs-Wrapper').length) {
         $('.tabs-stage > div').hide();
