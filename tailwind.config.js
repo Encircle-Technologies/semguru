@@ -180,7 +180,8 @@ module.exports = {
             88: '88px', 
         },
         letterSpacing: {            
-            '40': '0.04em',          
+            '40': '0.04em',
+            '30': '0.03em',          
             '20': '0.02em',
             '10': '0.01em',
         },        
@@ -285,6 +286,8 @@ module.exports = {
             'btn-bk-shadow': '-2px 2px 0px #fff',
             'btn-w-shadow': '-2px 2px 0px #000',
             'big-bk-shadow': '-10px 10px 0px #fff',
+            'big-w-shadow': '-10px 10px 0px #000',
+            'big_w_orange_shadow': '-10px 10px 0px #fc8a31',
         },
         borderWidth: {
             1: '1px',

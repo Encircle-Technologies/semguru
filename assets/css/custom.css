@@ -42,7 +42,73 @@
 .timeline__track::before {
     @apply content-[''] absolute top-50_per translate-y-minus_50 left-50_per translate-x-minus_50 border-0 border-dashed border-l-1 border-Black border-opacity-50 h-[calc(100%_-_8px)] w-[1px];          
 }                
+.timeline__itemtitle h2 {
+    @apply text-[32px] leading-40 xxl:text-[55px] xxl:leading-[65px] lg:text-34 lg:leading-44 font-500 text-Black;         
+}   
+.timeline__itemcontent h5 {
+    @apply lg:text-[25px] lg:leading-34 text-18 leading-24 font-500 text-Black block lg:mb-10 mb-6;                  
+}         
+.timeline__itemcontent .content p {
+    @apply text-Black;      
+}
+.timeline__itemrow:nth-child(odd) .timeline__element .timeline__itemmaingrid {
+    @apply lg:flex-row-reverse;      
+}          
+.timeline__itemrow:nth-child(odd) .timeline__itemcontent {
+    @apply lg:text-right text-left smscreen2:text-center;           
+}
+.timeline__itemrow:nth-child(even) .timeline__itemcontent {
+    @apply text-left smscreen2:text-center;
+}
+.timeline__itemrow:nth-child(even) .timeline__itemtitle h2 {
+    @apply text-Orange;                    
+}
+.timeline__itemrow:nth-child(even) .timeline__element:first-child {
+    @apply lg:order-2;            
+}    
+.timeline__itemrow:nth-child(even) .timeline__element:last-child {
+    @apply lg:order-1;
+}     
+.timeline__itemrow::before {
+    @apply lg:content-[''] absolute top-50_per translate-y-minus_50 left-50_per translate-x-minus_50 w-[32px] h-[32px] rounded-50_per bg-White border-2 border-solid border-Black z-1;        
+}
+.timeline__itemrow:nth-child(even)::before {
+    @apply lg:content-[''] border-Orange;    
+}     
+.timeline__itemmaingrid {
+    @apply smscreen2:flex-col smscreen2:justify-center smscreen2:items-center;              
+}
 /* Timeline End */
+
+/* About Zigzag Start */
+.aboutzigzag__imagegrid::before {
+    @apply content-[''] absolute bottom-50 left-0 lg:w-[304px] w-[204px] xl2:h-[454px] lg:h-[284px] h-[254px] bg-transparent border-2 border-solid border-White;        
+}                                  
+.aboutzigzag__imagebig--inner {
+    @apply relative pt-[101.10%];
+}
+.aboutzigzag__imagebig--inner img {
+    @apply absolute top-0 left-0 w-full h-full object-cover;                  
+}
+.aboutzigzag__imagebig--inner::before {
+    @apply content-[''] absolute -top-[10px] -right-[10px] w-[73px] h-[73px] lg:w-[146px] lg:h-[146px] border-0 border-solid border-White border-t-[20px] border-r-[20px] lg:border-t-[40px] lg:border-r-[40px] drop-shadow-big_w_orange_shadow z-1;        
+}
+.aboutzigzag__imagesmall {
+    @apply absolute bottom-0 right-0;  
+}
+.aboutzigzag__imagesmall--inner {
+    @apply p-20 bg-Orange;    
+}
+.aboutzigzag__imagesmall--inner img {
+    @apply xl2:max-w-[250px] max-w-[180px] xl2:max-h-[250px] max-h-[180px] xl2:h-[250px] h-[180px] object-cover;                     
+}                   
+.aboutzigzag__pattern {
+    @apply absolute top-50_per translate-y-minus_50 right-0 w-full;            
+}
+.aboutzigzag__pattern img {
+    @apply object-contain lg:max-w-[56px] max-w-[36px] w-full mr-0 ml-auto;          
+}
+/* About Zigzag End */
 }
 
 /* Responsive CSS Start */

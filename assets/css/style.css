@@ -132,7 +132,7 @@ body::-webkit-scrollbar-thumb,
     @apply text-Font text-[17px] leading-[1.5] font-400 tracking-20 not-italic relative block mb-20 last:mb-0;
   }
   .content.big p {
-    @apply text-24 leading-[120%];
+    @apply lg:text-24 lg:leading-[150%];
   }
 
   .content-txt ul li,
@@ -337,7 +337,7 @@ body::-webkit-scrollbar-thumb,
   }
   .bg-ob-pattern:before {
     content: "";
-    @apply absolute top-[80px] -right-[20px] w-[62px] h-[65px] lg:w-[124px] lg:h-[131px] bg-Orange z-1;
+    @apply lg:block hidden absolute top-[80px] -right-[20px] w-[62px] h-[65px] lg:w-[124px] lg:h-[131px] bg-Orange z-1;
   }
 
   .divider-black {
@@ -652,18 +652,26 @@ body::-webkit-scrollbar-thumb,
   /* casestudyTabs-Wrapper End */
   
   /* zigzag-img-content Start */
-  .zigzag-img-content .portrait {
+  .zigzag-img-content .landscape {
     @apply block relative overflow-hidden w-full pt-[86.99%];
+  }
+  .zigzag-img-content .portrait {
+    @apply block relative overflow-hidden w-full pt-[101.19%];
   }
   .zigzag-img-content .img-pattern {
     @apply relative
   }
   .zigzag-img-content .img-pattern:before {
     content: "";
-    @apply absolute -top-[21px] -right-[20px] w-[231px] h-[301px] border-0 border-solid border-[#ffdec5] border-t-[10px] border-r-[10px] drop-shadow-big-bk-shadow z-1;
+    @apply absolute -top-[21px] -right-[20px] w-[115px] h-[150px] lg:w-[231px] lg:h-[301px] border-0 border-solid border-[#ffdec5] border-t-[10px] border-r-[10px] drop-shadow-big-bk-shadow z-1;
   }
-  
-  
+  .zigzag-img-content .img-pattern-two {
+    @apply relative
+  }
+  .zigzag-img-content .img-pattern-two:before {
+    content: "";
+    @apply absolute -top-[10px] -right-[10px] w-[73px] h-[73px] lg:w-[146px] lg:h-[146px] border-0 border-solid border-Orange border-t-[20px] border-r-[20px] lg:border-t-[40px] lg:border-r-[40px] drop-shadow-big-w-shadow z-1;
+  }  
   /* zigzag-img-content End */
 
   /* Our work Start */
@@ -683,6 +691,7 @@ body::-webkit-scrollbar-thumb,
   }
   /* Our work End */
 
+  /* Customer Review Start */
   .customer-wrapper .customer-slider .landscape {
     @apply relative block w-full overflow-hidden pt-[443px]
   }
@@ -693,7 +702,10 @@ body::-webkit-scrollbar-thumb,
     @apply text-[20px] leading-[30px] font-Inter font-400 text-White m-0 mt-15 mx-auto p-0 block w-full max-w-[90%];
   }
   .customer-wrapper .quote .img:last-child {
-    @apply relative left-50_per translate-x-[0] mb-[-20px];
+    @apply relative lg:left-50_per lg:translate-x-[0] mb-[-20px];
+  }
+  .customer-wrapper .quote .img:last-child img {
+    @apply ml-auto lg:ml-0
   }
   .customer-wrapper .content span {
     @apply text-[25px] leading-[35px] font-Inter font-400 text-White m-0 p-0 flex items-center w-full;
@@ -705,16 +717,102 @@ body::-webkit-scrollbar-thumb,
     @apply pl-20
   }
   .customer-wrapper .customer-next {
-    @apply relative lg:absolute w-[60px] h-[60px] left-[inherit] lg:-right-[10%] lg:top-50_per lg:translate-y-minus_50 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
+    @apply relative lg:absolute w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] lgscreen:inset-0 lg:left-[inherit] lg:-right-[10%] lg:top-50_per lg:translate-y-minus_50 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
   }
   .customer-wrapper .customer-next img,
   .customer-wrapper .customer-prev img {
-    @apply invert;
+    @apply invert lgscreen:w-[14px];
   }
 
   .customer-wrapper .customer-prev {
-    @apply relative lg:absolute w-[60px] h-[60px] lg:-left-[10%] lg:top-50_per lg:translate-y-minus_50 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
+    @apply relative lg:absolute w-[30px] h-[30px] lg:w-[60px] lg:h-[60px] lgscreen:inset-0 lg:-left-[10%] lg:top-50_per lg:translate-y-minus_50 m-0 bg-transparent border-1 border-solid border-White flex-col justify-center items-center;
   }
+  /* Customer Review End */
+
+  /* Our Customer Start */
+  .customerlogo-wrapper .card {
+    @apply block w-full max-w-[222px]
+  }
+  .customerlogo-wrapper .card:nth-child(odd) {
+    @apply xl:mt-40;
+  }
+  .customerlogo-wrapper .card .landscape {
+    @apply block relative overflow-hidden w-full pt-[83.33%];
+  }
+  .customerlogo-wrapper .card .landscape img {
+    @apply absolute top-50_per left-50_per translate-x-minus_50 translate-y-minus_50;
+  }
+  /* Our Customer End */
+
+  /* Team Start */
+  .team-grid-wrapper .card {
+    @apply block relative overflow-hidden duration-300 delay-150 ease-linear;
+  }
+  .team-grid-wrapper .card .portrait {
+    @apply block relative overflow-hidden w-full pt-[101.04%] bg-Black duration-300 delay-150 ease-linear;
+  }
+  
+  .team-grid-wrapper .card .portrait:after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-full z-1;
+    /* background: rgb(0,0,0); */
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 80%);
+    transition:  all 500ms ease;
+  }
+  .team-grid-wrapper .card:hover .portrait:after {
+    @apply hidden
+  }
+  .team-grid-wrapper .card .avatar-profile,
+  .team-grid-wrapper .card .overlay {
+    @apply absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center p-20 z-1 duration-300 delay-150 ease-linear;
+  }
+  .team-grid-wrapper .card:hover .avatar-profile {
+    @apply invisible opacity-0;
+  }
+  .team-grid-wrapper .card .overlay {
+    @apply translate-y-[100%] justify-center text-center border-0 border-b-[3px] border-solid border-Orange;
+  }
+  .team-grid-wrapper .card:hover .overlay {
+    @apply translate-y-0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%)
+  }
+  .team-grid-wrapper .card .avatar-profile h4 {
+    @apply font-Poppins font-700 text-White text-30 leading-[1] tracking-30 capitalize m-0 p-0
+  }
+  .team-grid-wrapper .card .avatar-profile span {
+    @apply font-Roboto font-300 text-White text-17 leading-[1] uppercase m-0 p-0
+  }
+  .team-grid-wrapper .card .overlay h4 {
+    @apply font-Poppins font-700 text-Orange text-30 leading-[1] tracking-30 capitalize m-0 p-0
+  }
+  .team-grid-wrapper .card .overlay span {
+    @apply font-Roboto font-300 text-White text-17 leading-[1] uppercase m-0 mb-15 p-0
+  }
+  .team-grid-wrapper .card .overlay p {
+    @apply text-White text-[17px] leading-[1.5] font-400 tracking-20 not-italic relative block
+  }
+  .team-grid-wrapper .card .overlay ul {
+    @apply mt-20 flex flex-wrap items-center justify-center gap-3 m-0 p-0 w-full;
+  }
+  .team-grid-wrapper .card .overlay ul li a {
+    @apply bg-White flex flex-wrap items-center justify-center m-0 p-0 w-[46px] h-[46px] rounded-30 duration-300 delay-150 ease-linear hover:bg-Orange;
+  }
+  .team-grid-wrapper .card .overlay ul li a img {
+    @apply opacity-80 duration-300 delay-150 ease-linear
+  }
+  .team-grid-wrapper .card .overlay ul li a:hover img {
+    @apply opacity-100 invert;
+  }
+  /* Team End */
+
+  /* Get in Touch Start */
+  .getin-wrapper .landscape {
+    @apply block relative overflow-hidden w-full lg:pt-[94.76%];
+  }
+  .getin-wrapper .landscape img {
+    @apply lg:absolute lg:top-0 lg:left-0;
+  }
+  /* Get in touch End */
 }
 
 /* Responsive CSS Start */
