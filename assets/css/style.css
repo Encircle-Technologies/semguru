@@ -100,7 +100,7 @@ body::-webkit-scrollbar-thumb,
     @apply text-20 leading-26 lg:text-24 lg:leading-[120%];
   }
   h4.sub {
-    @apply text-20 leading-[120%];
+    @apply text-22 leading-[120%];
   }
   h5,
   .h5 {
@@ -135,18 +135,19 @@ body::-webkit-scrollbar-thumb,
     @apply lg:text-24 lg:leading-[150%];
   }
 
-  .content-txt ul li,
-  .content ul li {
-    @apply relative pl-25;
+  .content-ul_list ul {
+    @apply mb-25 last:mb-0;
   }
-  .content.white ul li,
-  .content-txt.white ul li {
+  .content-ul_list ul li {
+    @apply relative pl-35 text-Black text-17 block mb-20 last:mb-0;
+  }
+  .content-ul_list.white ul li,
+  .content-ul_list.white ul li {
     @apply text-White;
   }
-  .content ul li:before,
-  .content-txt ul li:before {
+  .content-ul_list ul li:before {
     content: "";
-    @apply absolute top-[10px] left-0 w-[6px] h-[6px] bg-Orange rounded-25;
+    @apply absolute top-[1px] left-0 w-[20px] h-[20px] bg-[url(./../../images/check.png)] bg-cover bg-no-repeat bg-center;
   }
 
   .content-txt ol li,
@@ -901,6 +902,45 @@ body::-webkit-scrollbar-thumb,
     filter: invert(71%) sepia(33%) saturate(5152%) hue-rotate(338deg) brightness(103%) contrast(98%);
   }
   /* Back to Top End */
+
+  /* breadcrumb Start */
+  .breadcrumb-pattern_two:before {
+    @apply top-[inherit] bottom-0 right-0 border-t-0 border-b-[8px]
+  }
+  /* breadcrumb End */
+
+  /* Content Tabs Start */
+  .contentsTab-wrapper .content-list li {
+    @apply w-full border-0 border-l-[3px] border-solid border-transparent;
+  }
+  .contentsTab-wrapper .content-list li.tab-active {
+    @apply border-Orange;
+  }
+  .contentsTab-wrapper .content-list li a {
+    @apply py-10 px-30 font-Inter font-500 text-[#404040] text-18 leading-26 m-0 block w-full duration-300 delay-150 ease-linear hover:text-Orange;
+  }
+  .contentsTab-wrapper .content-list li.tab-active a {
+    @apply text-Orange;
+  }
+  .note-orange p span,
+  .note-orange p b,
+  .note-orange p strong {
+    @apply text-Orange
+  }
+  .note-orange p {
+    @apply font-Inter font-500 text-17 leading-[150%] text-Black;
+  }
+  /* Content Tabs End */
+
+  /* Result Start */
+  .result-wrapper .resultcard .num,
+  .result-wrapper .resultcard .num span {
+    @apply font-Poppins font-600 text-Orange text-[38px] lg:text-[74px] lg:leading-[1] leading-[120%] m-0 p-0
+  }
+  .result-wrapper .resultcard .content p {
+    @apply text-20
+  }
+  /* Result End */
 }
 
 /* Responsive CSS Start */

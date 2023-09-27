@@ -17,6 +17,11 @@
 }
 
 @layer utilities {
+/* Common CSS Start */
+.container-custom {
+    @apply px-20;    
+}        
+/* Common CSS End */
 /* Breadcrumbs Banner Start */
 .breadcrunb-banner__image--main {
     @apply relative pt-[62.50%];                
@@ -103,7 +108,7 @@
     @apply xl2:max-w-[250px] max-w-[180px] xl2:max-h-[250px] max-h-[180px] xl2:h-[250px] h-[180px] object-cover;                     
 }                   
 .aboutzigzag__pattern {
-    @apply absolute top-[42%] translate-y-minus_50 right-0 w-full;            
+    @apply absolute top-[40%] translate-y-minus_50 right-0 w-full;               
 }        
 .aboutzigzag__pattern img {
     @apply object-contain lg:max-w-[56px] max-w-[36px] w-full mr-0 ml-auto;          
@@ -118,8 +123,8 @@
     @apply xl2:text-[130px] xl2:leading-[140px] xl:text-[60px] xl:leading-[70px] text-[46px] leading-[56px] font-700 font-Poppins text-Black flex items-end mdscreen:justify-center;        
 }   
 .visioninfo__itemdigit h2 span {
-    @apply xl2:text-[100px] xl2:leading-[120px] xl:text-[50px] xl:leading-[60px] text-30 leading-[40px] font-700 font-Poppins text-Black;   
-}          
+    @apply xl2:text-[100px] xl2:leading-[120px] xl:text-[50px] xl:leading-[60px] text-30 leading-[40px] font-600 font-Poppins text-Black;   
+}                 
 .visioninfo__itemdigit h6 {
     @apply xl:text-[25px] xl:leading-34 text-18 leading-26 font-600 font-Poppins text-Black uppercase xl2:mt-[-20px] mt-[-10px];       
 }          
@@ -130,8 +135,8 @@
     @apply mb-35; 
 }
 .visioninfo__rowitem {
-    @apply border-0 border-b-1 border-solid border-Black border-opacity-30 pb-35 flex items-center md:gap-x-[20px] md:gap-y-0 gap-y-[15px] mdscreen:flex-col mdscreen:justify-center mdscreen:text-center;                                                    
-}      
+    @apply border-0 border-b-1 border-solid border-Black border-opacity-30 pb-35 flex items-center md:gap-x-[20px] md:gap-y-0 gap-y-[15px] mdscreen:flex-col mdscreen:justify-center mdscreen:text-center xl2:pl-150 xl:pl-50 lg:pl-30 pl-15 lg:pr-40 pr-15;                                                          
+}                       
 .visioninfo__itemdigit {
     @apply xl2:w-[305px] lg:w-[205px] md:w-[140px];       
 }
@@ -141,9 +146,89 @@
 .visioninfo__rowitem:nth-child(even) .visioninfo__itemdigit h2,
 .visioninfo__rowitem:nth-child(even) .visioninfo__itemdigit h2 span,
 .visioninfo__rowitem:nth-child(even) .visioninfo__itemdigit h6 {
-    @apply text-Orange;     
+    @apply text-Orange;          
 }
 /* Vision Info End */
+
+/* Location Zigzag Start */
+.locationzigzag__infoelement--title h4 {
+    @apply xl:text-22 xl:leading-32 text-20 leading-26 font-Poppins font-600 text-White mb-10 capitalize;                          
+}              
+.locationzigzag__infoelement--item p img {
+    @apply w-[18px] object-contain mr-10 xl:mt-5 mt-0;                   
+    filter: invert(71%) sepia(33%) saturate(5152%) hue-rotate(338deg) brightness(103%) contrast(98%);    
+}
+.locationzigzag__infoelement--item p,
+.locationzigzag__infoelement--item p a {
+    @apply flex items-start w-fit xl:text-18 xl:leading-26 text-14 leading-20 font-400 font-Roboto text-White;         
+}          
+.locationzigzag__infoelement--item p a {
+    @apply font-500 transition-all duration-500 ease-in-out hover:text-Orange;        
+}
+.locationzigzag__infoelement--item p span {
+    @apply font-500;          
+}
+.locationzigzag__info .locationzigzag__infoelement:not(:last-child) {
+    @apply lg:mb-30 mb-15;      
+}           
+.locationzigzag__infoelement .locationzigzag__infoelement--item:not(:last-child) {
+    @apply lg:mb-15 mb-10;                    
+}
+.locationzigzag__imagemain--inner {
+    @apply relative pt-[110.69%] z-1;  
+}
+.locationzigzag__imagemain--inner img {
+    @apply absolute top-0 left-0 w-full h-full object-cover;                     
+}           
+.locationzigzag__imagemain {
+    @apply relative lg:pb-0 lg:pr-0 pr-10 pb-10;           
+}   
+.locationzigzag__imagemain::before {
+    @apply content-[''] absolute lg:top-40 lg:left-40 top-15 left-15 w-full h-full bg-Orange opacity-20;                              
+}               
+/* Location Zigzag End */
+
+/* Plans System Start */
+.plansystem__item--top {
+    @apply w-[79px] h-[79px] flex justify-center items-center bg-Orange rounded-50_per lg:mb-25 mb-10 mx-auto;                   
+}                         
+.plansystem__item--top img {
+    @apply max-w-[44px] object-contain;       
+}           
+.plansystem__item--bottom p {
+    @apply xl:text-[21px] text-[16px] xl:leading-[28px] leading-22 font-700 font-Poppins text-Black text-center;                             
+}      
+.plansystem__circlegrid--border {
+    @apply absolute xl:top-[45px] lg:top-[40px] left-0 w-full;     
+}           
+.plansystem__circlegrid--border img {
+    @apply w-full object-contain h-auto xl:max-w-[900px] lg:max-w-[810px] mx-auto;                             
+}  
+.plansystem__item {
+    @apply relative z-1 h-fit;       
+}
+.plansystem__circlegrid--inner .plansystem__item:first-child,
+.plansystem__circlegrid--inner .plansystem__item:last-child {
+    @apply xl:mt-[250px] lg:mt-[180px];
+}
+.plansystem__circlegrid--inner .plansystem__item:nth-child(2),
+.plansystem__circlegrid--inner .plansystem__item:nth-child(4) {
+    @apply xl:mt-[60px] lg:mt-[40px];        
+}                                
+.plansystem__bottomcirclelogo {
+    @apply xl:max-w-[622px] lg:max-w-[370px] max-w-[370px] mx-auto xl:mt-[-180px] lg:mt-[-150px] mt-40;                                               
+}      
+.plansystem__bottomcirclelogo--inner {
+    @apply xl:px-[90px] px-30 xl:pt-[145px] pt-50 xl:pb-70 pb-30 rounded-t-[100rem] bg-[#ffebdb];              
+}                
+.plansystem__bottomcirclelogo--inner img {
+    @apply xxl:max-w-[434px] lg:max-w-[234px] max-w-[160px] object-contain mx-auto;                 
+}            
+.plansystem__item--bottom {
+    @apply max-w-[230px] mx-auto;       
+}       
+/* Plans System End */  
+
 }
 
 /* Responsive CSS Start */

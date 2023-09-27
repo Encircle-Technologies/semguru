@@ -122,6 +122,64 @@ $(document).ready(function ($) {
         });
     }
 
+    if ($('.contentsTab-wrapper').length) {
+        $('.tabs-stage').hide();
+        $('.tabs-stage:first').show();
+        $('.content-list li:first').addClass('tab-active');
+
+        // Change tab class and display content
+        $('.content-list li a').on('click', function(event){
+            event.preventDefault();
+            $('.content-list li').removeClass('tab-active');
+            $(this).parent().addClass('tab-active');
+            $('.tabs-stage').hide();
+            $($(this).attr('href')).show();
+        });
+    }
+    if ($('.result-wrapper').length) {
+        // $('.num span').each(function () {
+        //     $(this).prop('Counter',0).animate({
+        //         Counter: $(this).text()
+        //     }, {
+        //         duration: 3000,
+        //         easing: 'swing',
+        //         step: function (now) {
+        //             $(this).text(Math.ceil(now));
+        //         }
+        //     });
+        // });
+
+        
+        $(window).scroll(function() {
+        var counted = 0;
+        var oTop = $('.resultcard').offset().top - window.innerHeight;
+            if (counted == 0 && $(window).scrollTop() > oTop) {
+                $('.num span').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                    countNum: countTo
+                    },
+
+                    {
+
+                    duration: 500,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                    });
+                });
+                counted = 1;
+            }
+        });
+    }
+
     // Load More
     if ($(".bloglist-wrapper").length) {
         $(document).ready(function () {
