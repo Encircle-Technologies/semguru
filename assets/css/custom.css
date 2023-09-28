@@ -234,10 +234,10 @@
     @apply content-[''] absolute top-0 right-0 h-full w-[40%] bg-[#fdfcfc];  
 }     
 .servbanner__content--preheading h4 {
-    @apply xl:text-[25px] xl:leading-[30px] text-16 leading-22 uppercase font-Inter font-600 text-Black w-fit relative;      
+    @apply xl:text-[25px] xl:leading-[30px] text-16 leading-22 uppercase font-Inter font-600 text-Black w-fit relative lg:pr-[130px] pr-70;           
 }
 .servbanner__content--preheading h4::after {
-    @apply content-[''] absolute top-50_per right-0;
+    @apply content-[''] absolute top-50_per right-0 bg-Orange lg:h-4 h-[2px] lg:w-[110px] w-[50px];         
 }
 /* Services Banner End */
 

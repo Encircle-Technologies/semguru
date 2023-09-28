@@ -899,7 +899,7 @@ body::-webkit-scrollbar-thumb,
 
   /* Back to Top Start */
   .backto_top #button {
-    @apply inline-block bg-transparent w-50 h-50 text-center fixed bottom-30 right-40 opacity-0 invisible z-10 duration-300 delay-150 ease-linear
+    @apply flex flex-wrap items-center justify-center bg-transparent w-[25px] h-[25px] lg:w-50 lg:h-50 text-center fixed bottom-30 right-10 lg:right-40 opacity-0 invisible z-10 duration-300 delay-150 ease-linear
   }
   .backto_top #button.show {
     opacity: 1;
