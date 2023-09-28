@@ -313,6 +313,7 @@ module.exports = {
             offered: '0px 4px 4px rgba(0, 153, 219, 0.2)',
             'testimonial-card': '0px 4px 10px 0px rgba(0, 0, 0, 0.25)',
             'newsletter': '0px 4px 10px 0px rgba(0, 0, 0, 0.28)',
+            'serviceform': '0px 12px 40px 0px rgba(0, 0, 0, 0.03)',
         },
         outline: {
             none: 'none',

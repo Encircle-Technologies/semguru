@@ -918,6 +918,13 @@ body::-webkit-scrollbar-thumb,
   .breadcrumb-pattern_two:before {
     @apply top-[inherit] bottom-0 right-0 border-t-0 border-b-[8px] border-r-[8px]
   }
+  .breadcrumb-pattern_none:before {
+    @apply hidden;
+  }
+  .breadcrunb-banner__image-pattern:before {
+    content: "";
+    @apply hidden lg:block absolute -bottom-[25px] -left-[25px] w-[85px] h-[85px] border-0 border-l-[12px] border-b-[12px] border-solid border-Orange z-1;
+  }
   /* breadcrumb End */
 
   /* Content Tabs Start */
@@ -1029,9 +1036,53 @@ body::-webkit-scrollbar-thumb,
   }
   
   /* Project team End */
+
+  /* contact-info Start */
+  .contact-info_wrapper {
+    @apply relative;
+  }
+  .contact-info_wrapper .card .info p {
+    @apply text-20 text-Black font-Roboto
+  }
+  .contact-info_wrapper .card .info a {
+    @apply text-20 text-Black font-Roboto font-500 m-0 p-0 duration-300 delay-150 ease-linear hover:text-Orange;
+  }
+  .contact-info_wrapper .card:last-child .info a {
+    @apply text-26 font-700
+  }
+  /* contact-info End */
+
+  /* Contact Form Start */
+  .contactForm-wrapper #contact-form .form-control {
+    @apply block bg-transparent border-0 border-b-[3px] border-opacity-20 border-solid border-White rounded-[0px] text-White text-17 leading-24 font-Roboto font-500 w-full m-0 p-0 pr-30 py-10 placeholder:capitalize;
+  }
+  .contactForm-wrapper #contact-form #first,
+  .contactForm-wrapper #contact-form #last,
+  .contactForm-wrapper #contact-form #company {
+    @apply bg-[url(./../../images/user.png)] bg-no-repeat bg-[right_0px_top_0.65rem] bg-[length:22px] appearance-none;
+  }
+  .contactForm-wrapper #contact-form #email {
+    @apply bg-[url(./../../images/email.png)] bg-no-repeat bg-[right_0px_top_0.65rem] bg-[length:22px] appearance-none;
+  }
+  .contactForm-wrapper #contact-form textarea {
+    @apply bg-[url(./../../images/chat.png)] bg-no-repeat bg-[right_0px_top_0.65rem] bg-[length:22px] appearance-none;
+  }
+  .contactForm-wrapper #contact-form .form-control:focus {
+    @apply border-opacity-100;
+  }
+  .contactForm-wrapper #contact-form .form-group {
+    @apply relative block
+  }
+  /* Contact Form End */
 }
 
 /* Responsive CSS Start */
+
+@screen smscreen2 {
+  br {
+    @apply hidden
+  }
+}
 
 @screen xlscreen {
   header.header .logo img {

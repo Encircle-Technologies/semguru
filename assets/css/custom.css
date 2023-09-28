@@ -239,6 +239,82 @@
 .servbanner__content--preheading h4::after {
     @apply content-[''] absolute top-50_per right-0 bg-Orange lg:h-4 h-[2px] lg:w-[110px] w-[50px];         
 }
+.serviceform__title h3 {
+    @apply xl:text-[35px] xl:leading-44 text-22 leading-32;  
+}
+.serviceform__title.title-Black .pattern::before {
+    @apply content-[''] lg:top-[-15px] lg:right-[-25px];             
+}    
+.shadow-serviceform {
+    @apply border-0 border-b-2 border-solid border-Orange;      
+}
+.seo_form form .contactus__form--box input {
+    @apply w-full py-5 outline-none border-1 border-solid border-[#c6c6c6] xxl:h-[59px] h-[38px] bg-White uppercase lg:text-16 lg:leading-22 text-14 leading-20 font-Inter text-Black font-400 lg:px-18 px-14;                     
+}
+.seo_form form .contactus__form--box input::placeholder {
+    @apply opacity-70;          
+}
+.seo_form form .contactus__gridtwo {
+    @apply grid gap-[12px] sm:grid-cols-2 grid-cols-1;             
+}
+.seo_form form .contactus__gridtwo,
+.seo_form form .contactus__gridone {
+    @apply mb-[12px];            
+}
+.seo_form form .contactus__checkgrp--title h5 {
+    @apply lg:text-18 lg:leading-26 text-16 leading-22 text-Black font-600 opacity-70 pt-[12px] lg:mb-18 mb-10;               
+}      
+.seo_form form .contactus__checkgrpmain {
+    @apply flex flex-wrap items-center xxl:gap-x-11 lg:gap-x-5 gap-y-2;  
+}
+.seo_form form .contactus__checkgrp--element {
+    @apply flex items-center gap-x-2;           
+}
+.seo_form form .contactus__checkgrp--element label {
+    @apply lg:text-18 lg:leading-26 text-16 leading-22 text-[#000000c4] font-Inter font-300 relative lg:pl-[36px] pl-[25px];                           
+}         
+.seo_form form .contactus__checkgrp--element label::before {
+    @apply content-[''] absolute left-0 top-0 m-0 lg:w-[30px] w-[20px] lg:h-[25px] h-[15px] bg-White border-1 border-solid border-[#c6c6c6] rounded-none;
+}                                      
+.seo_form form .contactus__checkgrp--element input:checked + label::after {
+    @apply content-[''] block absolute left-10 top-[1px] m-0 lg:w-[9px] w-[20px] lg:h-[18px] h-[15px] border-0 border-r-2 border-b-2 border-solid border-Orange rounded-none rotate-45;        
+}               
+.seo_form form .contactus__checkgrp--element input[type="checkbox"] {
+    @apply appearance-none opacity-0 invisible;                                                    
+}       
+.seo_form form .contactus__acceptbox {
+    @apply lg:pt-28 pt-15;    
+}
+.seo_form form .contactus__acceptbox--title h5 {
+    @apply lg:text-18 lg:leading-26 text-16 leading-22 text-Black opacity-70 lg:mb-18 mb-10 font-Inter font-600;                       
+}
+.seo_form form .contactus__acceptbox--element {
+    @apply flex items-start gap-x-2;
+}
+.seo_form form .contactus__acceptbox--element label {
+    @apply lg:text-[15px] leading-20 text-[#444] font-Inter font-300 relative lg:pl-[36px] pl-[25px];                    
+}            
+.seo_form form .contactus__acceptbox--element label a {
+    @apply text-Orange transition-all duration-500 ease-in-out hover:text-Black;            
+}
+.seo_form form .contactus__acceptbox--element label::before {
+    @apply content-[''] absolute left-0 top-0 m-0 lg:w-[22px] w-[18px] lg:h-[22px] h-[18px] bg-White border-1 border-solid border-[#c6c6c6] rounded-none;
+}                  
+.seo_form form .contactus__acceptbox--element input[type="checkbox"] {   
+    @apply appearance-none opacity-0 invisible;                                   
+}             
+.seo_form form .contactus__acceptbox--element input:checked + label::after {
+    @apply content-[''] block absolute left-[7px] top-[2px] m-0 lg:w-[8px] w-[8px] lg:h-[14px] h-[10px] border-0 border-r-2 border-b-2 border-solid border-Orange rounded-none rotate-45;            
+}       
+.seo_form form .contactus__form--submitbtn {
+    @apply lg:pt-25 pt-15;            
+}
+.seo_form form .contactus__form--submitbtn input[type=submit] {
+    @apply lg:h-[55px] h-[40px] w-full py-5 lg:px-18 px-14 flex justify-center items-center bg-Orange hover:bg-Black transition-all duration-500 ease-in-out text-White uppercase lg:text-20 lg:leading-[30px] text-16 leading-22 tracking-20 border-0 outline-none cursor-pointer;                               
+}      
+.servbanner__formmain {
+    @apply lg:mb-[-150px];                 
+}
 /* Services Banner End */
 
 }
