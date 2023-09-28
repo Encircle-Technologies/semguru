@@ -242,6 +242,7 @@ module.exports = {
             none: 'none',
             'tabs_gradient': 'linear-gradient(90deg, rgba(255,255,255,0.05) 20%, rgba(25,25,25,0) 100%)',
             'banner_gradient': 'linear-gradient(0deg, rgba(252,138,49,0.08) 0%, rgba(255,255,255,0) 65%)',
+            'list-ol_gradient': 'linear-gradient(90deg, rgba(249,249,249,1) 30%, rgba(255,255,255,0) 60%)',
         }),
         backgroundPosition: {
             'bgcp':'50% 80%',

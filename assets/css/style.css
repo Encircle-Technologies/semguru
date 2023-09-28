@@ -125,11 +125,11 @@ body::-webkit-scrollbar-thumb,
   }
   .content-txt p a,
   .content p a {
-    @apply no-underline ease-in duration-300 delay-150 text-Orange font-700 font-Roboto;
+    @apply no-underline ease-linear duration-300 delay-150 text-Orange font-400 font-Roboto hover:underline;
   }
   .content-txt p,
   .content p {
-    @apply text-Font text-[17px] leading-[1.5] font-400 tracking-20 not-italic relative block mb-20 last:mb-0;
+    @apply text-Black text-opacity-75 text-[17px] leading-[1.5] font-400 tracking-20 not-italic relative block mb-20 last:mb-0;
   }
   .content.big p {
     @apply lg:text-24 lg:leading-[150%];
@@ -182,6 +182,17 @@ body::-webkit-scrollbar-thumb,
   .btn-w-pattern .btn:after {
     content: "";
     @apply absolute -top-2 -right-2 w-[17px] h-[17px] border-0 border-solid border-White border-t-[5px] border-r-[5px] drop-shadow-btn-w-shadow z-1;
+  }
+
+  .btn-link {
+    @apply text-Orange text-18 leading-[120%] font-Inter font-600 capitalize m-0 p-0 relative duration-300 delay-150 ease-linear;
+  }
+  .btn-link:after {
+    content: "";
+    @apply absolute w-full bottom-0 left-0 h-[1px] bg-Orange duration-300 delay-150 ease-linear;
+  }
+  .btn-link:hover:after {
+    @apply right-0 w-0;
   }
 
   .line-clamp-two {
@@ -905,7 +916,7 @@ body::-webkit-scrollbar-thumb,
 
   /* breadcrumb Start */
   .breadcrumb-pattern_two:before {
-    @apply top-[inherit] bottom-0 right-0 border-t-0 border-b-[8px]
+    @apply top-[inherit] bottom-0 right-0 border-t-0 border-b-[8px] border-r-[8px]
   }
   /* breadcrumb End */
 
@@ -933,14 +944,91 @@ body::-webkit-scrollbar-thumb,
   /* Content Tabs End */
 
   /* Result Start */
-  .result-wrapper .resultcard .num,
-  .result-wrapper .resultcard .num span {
+  .resultcard .num,
+  .resultcard .num span {
     @apply font-Poppins font-600 text-Orange text-[38px] lg:text-[74px] lg:leading-[1] leading-[120%] m-0 p-0
   }
-  .result-wrapper .resultcard .content p {
+  .resultcard .content p {
     @apply text-20
   }
   /* Result End */
+
+  .step-ol_list ol {
+    counter-reset: ordered;
+    @apply list-none flex flex-col m-0 p-0 w-full relative gap-8 items-start justify-start;
+  }
+  .step-ol_list ol::before {
+    content: "";
+    @apply absolute top-[0px] left-[28px] w-[1px] h-[calc(100%_-_110px)] border-0 border-dashed border-Orange border-l-1;
+  }
+  .step-ol_list ol li {
+    @apply relative m-0 p-0 pl-24 text-Font text-16 leading-26 font-400 not-italic;
+  }
+  .step-ol_list ol li:before {
+    content: "0" counter(ordered);
+    counter-increment: ordered;
+    @apply text-Orange font-600 font-Inter text-17 leading-26 absolute top-[10px] left-0 flex flex-col items-center justify-center w-[55px] h-[55px] z-1;
+  }
+  .step-ol_list ol li:after {
+    content: "";
+    @apply absolute top-[11px] left-0 w-[55px] h-[55px] bg-White border-1 border-solid border-Orange rotate-45;
+  }
+  .step-ol_list ol li span {
+    @apply block m-0 mb-20 p-0 py-15 pl-[63px] text-Black font-Poppins font-700 text-26 leading-[47px] capitalize bg-list-ol_gradient;
+  }
+  .step-ol_list ol li p {
+    @apply text-17 leading-[30px] text-Black text-opacity-75 font-Roboto font-300 m-0 p-0 pl-[63px];
+  }
+
+  /* customer-testimonial Start */
+  .customer-testimonial .quote .img:first-child {
+    @apply -ml-[15px]
+  }
+  .customer-testimonial .quote .img:last-child img {
+    @apply ml-auto
+  }
+  .customer-testimonial .quote em {
+    @apply text-[20px] leading-[30px] font-Inter font-400 text-White m-0 mt-15 mx-auto p-0 block w-full;
+  }
+  .customer-testimonial .content span {
+    @apply text-[25px] leading-[35px] font-Inter font-400 text-White m-0 p-0 flex items-center w-full;
+  }
+  .customer-testimonial .content span b.dash {
+    @apply block w-[10px] h-[1px] bg-Orange mr-10;
+  }
+  .customer-testimonial .content p {
+    @apply pl-20
+  }
+  .customer-testimonial .img-pattern-two:before {
+    @apply w-[63px] h-[63px] lg:h-[126px] lg:w-[126px] border-t-[30px] border-r-[30px]
+  }
+  /* customer-testimonial End */
+
+  /* Project team Start */
+  .pro-team .card .portrait {
+    @apply block relative overflow-hidden w-full pt-[104.41%] duration-300 delay-150 ease-linear;
+  }
+  .pro-team .card:hover .portrait {
+    @apply grayscale;
+  }
+  .pro-team .card .portrait:before {
+    content: "";
+    @apply absolute top-0 right-0 w-[26px] h-[25px] z-1 duration-300 delay-150 ease-linear;
+    background: rgb(240,240,240);
+    background: linear-gradient(45deg, rgba(240,240,240,1) 50%, rgba(255,255,255,1) 50%);
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.25));
+  }
+  .pro-team .card:hover .portrait:before {
+    @apply w-0 h-0;
+  }
+  .pro-team .card .portrait img {
+    @apply absolute top-0 left-0;
+  }
+  .pro-team .card .btn-custom {
+    @apply mt-20;
+  }
+  
+  /* Project team End */
 }
 
 /* Responsive CSS Start */

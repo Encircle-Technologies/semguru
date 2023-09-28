@@ -227,7 +227,19 @@
 .plansystem__item--bottom {
     @apply max-w-[230px] mx-auto;       
 }       
-/* Plans System End */  
+/* Plans System End */    
+
+/* Services Banner Start */
+.servbanner-wrapper::before {
+    @apply content-[''] absolute top-0 right-0 h-full w-[40%] bg-[#fdfcfc];  
+}     
+.servbanner__content--preheading h4 {
+    @apply xl:text-[25px] xl:leading-[30px] text-16 leading-22 uppercase font-Inter font-600 text-Black w-fit relative;      
+}
+.servbanner__content--preheading h4::after {
+    @apply content-[''] absolute top-50_per right-0;
+}
+/* Services Banner End */
 
 }
 
