@@ -25,6 +25,7 @@ module.exports = {
             Font: '#383838',
             Orange: '#fc8a31',
             Gray: '#989898',
+            Black500: '#3c4447',
         },
         flex: {
             '1': '1 1 0%',
@@ -180,6 +181,7 @@ module.exports = {
             88: '88px', 
         },
         letterSpacing: {            
+            '80': '0.08em',
             '40': '0.04em',
             '30': '0.03em',
             '25': '0.025em',

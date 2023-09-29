@@ -106,6 +106,40 @@ $(document).ready(function ($) {
         });
     }
 
+    if ($('.personal-wrapper').length) {
+        var blogSlider = new Swiper(".blog-slider", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            speed: 2000,
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false
+            // },
+            navigation: {
+                nextEl: ".blog-next",
+                prevEl: ".blog-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1440: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+            },
+        });
+    }
+
     // Tabs 
     if ($('.casestudyTabs-Wrapper').length) {
         $('.tabs-stage > div').hide();
@@ -136,20 +170,7 @@ $(document).ready(function ($) {
             $($(this).attr('href')).show();
         });
     }
-    if ($('.result-wrapper').length) {
-        // $('.num span').each(function () {
-        //     $(this).prop('Counter',0).animate({
-        //         Counter: $(this).text()
-        //     }, {
-        //         duration: 3000,
-        //         easing: 'swing',
-        //         step: function (now) {
-        //             $(this).text(Math.ceil(now));
-        //         }
-        //     });
-        // });
-
-        
+    if ($('.result-wrapper, .personal-wrapper').length) {        
         $(window).scroll(function() {
         var counted = 0;
         var oTop = $('.resultcard').offset().top - window.innerHeight;
@@ -241,6 +262,23 @@ $(document).ready(function ($) {
         btn.on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({scrollTop:0}, '500');
+        });
+    }
+
+    // Testimonial Slider
+    if ($('.testimonialctm__main').length) {
+        var testimonialslider = new Swiper(".testimonial_slider", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 2000,
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false
+            // },
+            navigation: {
+                nextEl: ".testimonial_next",
+                prevEl: ".testimonial_prev",
+            },         
         });
     }
     

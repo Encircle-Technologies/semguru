@@ -271,13 +271,13 @@
     @apply flex items-center gap-x-2;           
 }
 .seo_form form .contactus__checkgrp--element label {
-    @apply lg:text-18 lg:leading-26 text-16 leading-22 text-[#000000c4] font-Inter font-300 relative lg:pl-[36px] pl-[25px];                           
-}         
+    @apply lg:text-18 lg:leading-26 text-16 leading-22 text-[#000000c4] font-Inter font-300 relative lg:pl-[36px] pl-[35px] cursor-pointer;                                
+}            
 .seo_form form .contactus__checkgrp--element label::before {
-    @apply content-[''] absolute left-0 top-0 m-0 lg:w-[30px] w-[20px] lg:h-[25px] h-[15px] bg-White border-1 border-solid border-[#c6c6c6] rounded-none;
-}                                      
+    @apply content-[''] absolute left-0 top-0 m-0 lg:w-[30px] w-[27px] lg:h-[25px] h-[22px] bg-White border-1 border-solid border-[#c6c6c6] rounded-none;
+}                                                
 .seo_form form .contactus__checkgrp--element input:checked + label::after {
-    @apply content-[''] block absolute left-10 top-[1px] m-0 lg:w-[9px] w-[20px] lg:h-[18px] h-[15px] border-0 border-r-2 border-b-2 border-solid border-Orange rounded-none rotate-45;        
+    @apply content-[''] block absolute left-10 top-[1px] m-0 lg:w-[9px] w-[8px] lg:h-[18px] h-[16px] border-0 border-r-2 border-b-2 border-solid border-Orange rounded-none rotate-45;              
 }               
 .seo_form form .contactus__checkgrp--element input[type="checkbox"] {
     @apply appearance-none opacity-0 invisible;                                                    
@@ -298,13 +298,13 @@
     @apply text-Orange transition-all duration-500 ease-in-out hover:text-Black;            
 }
 .seo_form form .contactus__acceptbox--element label::before {
-    @apply content-[''] absolute left-0 top-0 m-0 lg:w-[22px] w-[18px] lg:h-[22px] h-[18px] bg-White border-1 border-solid border-[#c6c6c6] rounded-none;
-}                  
+    @apply content-[''] absolute left-0 top-0 m-0 lg:w-[22px] w-[20px] lg:h-[22px] h-[20px] bg-White border-1 border-solid border-[#c6c6c6] rounded-none;
+}                     
 .seo_form form .contactus__acceptbox--element input[type="checkbox"] {   
     @apply appearance-none opacity-0 invisible;                                   
 }             
 .seo_form form .contactus__acceptbox--element input:checked + label::after {
-    @apply content-[''] block absolute left-[7px] top-[2px] m-0 lg:w-[8px] w-[8px] lg:h-[14px] h-[10px] border-0 border-r-2 border-b-2 border-solid border-Orange rounded-none rotate-45;            
+    @apply content-[''] block absolute lg:left-[7px] left-[6px] top-[2px] m-0 lg:w-[8px] w-[7px] lg:h-[14px] h-[12px] border-0 border-r-2 border-b-2 border-solid border-Orange rounded-none rotate-45;                   
 }       
 .seo_form form .contactus__form--submitbtn {
     @apply lg:pt-25 pt-15;            
@@ -317,11 +317,132 @@
 }
 /* Services Banner End */
 
+/* Advantage Grid Start */
+.advantagegrid__itemicon img {
+    @apply max-w-[75px] object-contain block lg:h-[72px] h-[52px] smscreen2:mx-auto;     
+}      
+.advantagegrid__itemtext h6 {
+    @apply xl:text-[23px] xl:leading-33 text-16 leading-22 font-Inter font-500 text-White smscreen2:text-center mt-20;            
+}               
+.advantagegrid__itemtext {
+    @apply lgscreen:max-w-[250px] smscreen2:mx-auto;   
+}      
+/* Advantage Grid End */
+
+/* Ebook Req Start */
+.ebookreq__image img {
+    @apply max-w-[220px] object-contain h-auto;             
+}
+.ebookform .ebookreq__formplate {
+    @apply lg:h-[63px] sm:h-[53px] h-[45px] bg-White w-full lg:pl-37 pl-30 relative justify-between flex items-center;                    
+}                         
+.ebookform .ebookreq__formplate::before {
+    background-image: url('./../../images/envelope-regular.svg');  
+    @apply content-[''] absolute lg:left-20 left-10 top-50_per translate-y-minus_50 bg-no-repeat bg-contain block h-[18px] w-[18px] rotate-[-30deg];                   
+}          
+.ebookform input {
+    @apply border-0 outline-none pl-15 ml-10 border-l-2 pr-15 sm:w-auto w-full border-solid border-[#e3e3e3] lg:text-16 lg:leading-22 text-14 leading-20 font-Inter font-400 text-Black;                
+}          
+.ebookform input::placeholder {
+    @apply opacity-50;                    
+}
+.ebookform button {
+    @apply lg:py-15 py-8 lg:px-30 px-20 bg-Black hover:bg-Orange transition-all duration-500 ease-in-out flex items-center gap-x-[10px] lg:text-20 lg:leading-[30px] text-14 leading-20 font-700 font-Poppins text-White sm:border-[3px] border-0 border-solid border-White cursor-pointer h-full smscreen2:mx-auto;                                         
+}             
+.ebookform button span {
+    @apply lg:w-[35px] w-[25px] lg:h-[35px] h-[25px] rounded-50_per flex justify-center items-center bg-White;            
+}
+.ebookform button span img {
+    @apply object-contain lg:w-[16px] w-[12px];         
+    filter: invert(65%) sepia(77%) saturate(2218%) hue-rotate(338deg) brightness(102%) contrast(98%);       
+}     
+.ebookform .ebookreq__formbtn {
+    @apply pt-15;
+}       
+/* Ebook Req End */
+
+/* Services General Container Start */
+.services-generalct-row {
+    @apply lg:pt-40 pt-20;              
+}
+.services_content h1,
+.services_content h2,
+.services_content h3,
+.services_content h4,
+.services_content h5,
+.services_content h6 {
+    @apply xxl:mb-35 lg:mb-25 mb-15;     
+}
+.services_content h3 {
+    @apply text-[32px] lg:text-[42px] lg:leading-[55px] leading-[42px];    
+}     
+.services_content h4 {
+    @apply text-24 leading-[30px] lg:text-32 lg:leading-[42px];
+}
+.services_content h3, .services_content h4 {
+    @apply xxl:pt-30 lg:pt-10 pt-10;              
+}
+.services-generalct-rowimginner {
+    @apply relative pt-[42.82%];
+}
+.services-generalct-rowimginner img {
+    @apply absolute top-0 left-0 w-full h-full object-cover object-top;               
+}
+.services-generalct-rowimg {
+    @apply xxl:py-60 sm:py-30 py-20;          
+}
+.services-generalct .note-orange p {
+    @apply text-opacity-70;        
+}
+.services-generalct .note-orange h6 {
+    @apply lg:text-[23px] lg:leading-33 text-18 leading-26 font-Poppins font-600 text-Orange uppercase; 
+}
+.services-generalct .note-orange ul {
+    @apply flex flex-col gap-y-3 pt-20 m-0;                    
+}       
+.services-generalct .note-orange ul li {
+    @apply relative pl-25 text-Black text-opacity-70 lg:text-17 lg:leading-26 text-14 leading-20 block;
+}                     
+.services-generalct .note-orange ul li a {
+    @apply transition-all duration-500 ease-in-out text-Black hover:text-Orange whitespace-normal;
+    word-break: break-word;             
+}
+.services-generalct .note-orange ul li::before {
+    @apply content-[''] absolute top-[6px] left-0 w-[12px] h-[12px] bg-[url(./../../images/list-polygon.svg)] bg-cover bg-no-repeat bg-center;
+}                        
+/* Services General Container End */
+
+/* Testimonial Slider Start */
+.testimonialctm__slideitem {
+    @apply xxl:px-75 lg:px-45 px-20 lg:py-50 py-30 lg:pb-50 sm:pb-30 pb-[120px];                              
+}     
+.testimonialctm__slideitem--text h6 {
+    @apply font-Inter font-400 xxl:text-30 xxl:leading-40 lg:text-24 lg:leading-34 text-18 leading-26 text-White italic;   
+}
+.testimonialctm__slideitem--avtarimage img {
+    @apply lg:w-[80px] w-[50px] lg:h-[80px] h-[50px] object-cover object-top;            
+}
+.testimonialctm__slideitemname h5 {
+    @apply font-Poppins lg:text-[27px] lg:leading-38 text-18 leading-26 font-700 text-White mb-5;                  
+}             
+.testimonialctm__slideitemdate span {
+    @apply font-Roboto lg:text-[20px] lg:leading-[30px] text-14 leading-20 font-400 text-White;
+}      
+.testimonialctm__slideitem--logo img {
+    @apply lg:max-w-[170px] max-w-[120px] object-contain;
+}             
+.testimonialctm__slideitem {
+    @apply smscreen2:bg-Black smscreen2:border-1 smscreen2:border-solid smscreen2:border-Orange sm:border-t-2 sm:border-solid sm:border-t-Orange;    
+}       
+/* Testimonial Slider End */
+
 }
 
 /* Responsive CSS Start */
 
-@screen xlscreen {
-  
+@screen smscreen2 {
+    .testimonialctm__slideitem {
+        background-image: none !important;     
+    }
 }
 /* Responsive CSS End */
