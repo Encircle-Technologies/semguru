@@ -317,6 +317,7 @@ module.exports = {
             'newsletter': '0px 4px 10px 0px rgba(0, 0, 0, 0.28)',
             'serviceform': '0px 12px 40px 0px rgba(0, 0, 0, 0.03)',
             'testimonial_arrow': '0px 4px 12px 0px rgba(0, 0, 0, 0.05)',
+            'faqs__shadow': '0px 7px 10px 0px rgba(0, 0, 0, 0.01)',   
         },
         outline: {
             none: 'none',

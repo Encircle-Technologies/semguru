@@ -292,7 +292,7 @@
     @apply flex items-start gap-x-2;
 }
 .seo_form form .contactus__acceptbox--element label {
-    @apply lg:text-[15px] leading-20 text-[#444] font-Inter font-300 relative lg:pl-[36px] pl-[25px];                    
+    @apply lg:text-[15px] leading-20 text-[#444] font-Inter font-300 relative lg:pl-[36px] pl-[25px] cursor-pointer;                                      
 }            
 .seo_form form .contactus__acceptbox--element label a {
     @apply text-Orange transition-all duration-500 ease-in-out hover:text-Black;            
@@ -341,8 +341,8 @@
     @apply content-[''] absolute lg:left-20 left-10 top-50_per translate-y-minus_50 bg-no-repeat bg-contain block h-[18px] w-[18px] rotate-[-30deg];                   
 }          
 .ebookform input {
-    @apply border-0 outline-none pl-15 ml-10 border-l-2 pr-15 sm:w-auto w-full border-solid border-[#e3e3e3] lg:text-16 lg:leading-22 text-14 leading-20 font-Inter font-400 text-Black;                
-}          
+    @apply border-0 outline-none pl-15 ml-10 border-l-2 pr-15 border-solid border-[#e3e3e3] lg:text-16 lg:leading-22 text-14 leading-20 font-Inter font-400 text-Black lg:w-[calc(100%_-_310px)] sm:w-[calc(100%_-_240px)] w-full;                                      
+}                       
 .ebookform input::placeholder {
     @apply opacity-50;                    
 }
@@ -419,14 +419,23 @@
 .testimonialctm__slideitem--text h6 {
     @apply font-Inter font-400 xxl:text-30 xxl:leading-40 lg:text-24 lg:leading-34 text-18 leading-26 text-White italic;   
 }
+.testimonialctm__slideitem--text-small h6 {
+    @apply font-Inter font-400 text-18 leading-26 text-White italic;   
+}
 .testimonialctm__slideitem--avtarimage img {
     @apply lg:w-[80px] w-[50px] lg:h-[80px] h-[50px] object-cover object-top;            
 }
 .testimonialctm__slideitemname h5 {
     @apply font-Poppins lg:text-[27px] lg:leading-38 text-18 leading-26 font-700 text-White mb-5;                  
 }             
+.testimonialctm__slideitemname-small h5 {
+    @apply font-Poppins text-18 leading-26 font-700 text-White mb-5;                  
+}             
 .testimonialctm__slideitemdate span {
     @apply font-Roboto lg:text-[20px] lg:leading-[30px] text-14 leading-20 font-400 text-White;
+} 
+.testimonialctm__slideitemdate-small span {
+    @apply font-Roboto text-14 leading-24 font-400 text-White;
 }      
 .testimonialctm__slideitem--logo img {
     @apply lg:max-w-[170px] max-w-[120px] object-contain;
@@ -435,6 +444,9 @@
     @apply smscreen2:bg-Black smscreen2:border-1 smscreen2:border-solid smscreen2:border-Orange sm:border-0 sm:border-t-2 sm:border-solid sm:border-t-Orange;               
 }              
 .testi-navigation .testi__arrow {
+    @apply shadow-testimonial_arrow lg:w-[48px] w-[30px] lg:h-[48px] h-[30px] flex justify-center items-center rounded-50_per bg-White z-2;            
+} 
+.testi-navigation .testi__arrow-small {
     @apply shadow-testimonial_arrow lg:w-[48px] w-[30px] lg:h-[48px] h-[30px] flex justify-center items-center rounded-50_per bg-White z-2;            
 }          
 .testimonialctm__slider {
@@ -445,8 +457,107 @@
 }
 .testi-navigation .swiper-button-next {
     @apply lg:right-[0px] right-[0px]; 
-}              
+}      
+.testi-navigation .testi__arrow-small.swiper-button-prev {
+    @apply lg:left-[-24px] left-[0px];
+}
+.testi-navigation .testi__arrow-small.swiper-button-next {
+    @apply lg:right-[-24px] right-[0px]; 
+}   
+.testi-navigation .testi__arrow-small.swiper-button-prev img {
+    @apply -ml-4
+}
+.testi-navigation .testi__arrow-small.swiper-button-next img {
+    @apply -mr-4
+}        
 /* Testimonial Slider End */
+
+/* Newsletter Start */
+.newsletterctm__imageinner img {
+    @apply object-contain object-bottom h-full max-h-[265px];           
+}
+.newsletterctm__contentinner {
+    @apply lgscreen:text-center;     
+}
+.newsletterctm__contentinner .title h3 {
+    @apply text-24 leading-[30px] lg:text-[36px] lg:leading-[40px];                           
+}
+.newsletterform .newsletter__formplate {
+    @apply lg:h-[52px] sm:h-[53px] h-[45px] bg-White w-full lg:pl-37 pl-30 relative justify-between flex items-center;                    
+}                               
+.newsletterform .newsletter__formplate::before {
+    background-image: url('./../../images/newsform-icon.png');  
+    @apply content-[''] absolute lg:left-20 left-10 top-50_per translate-y-minus_50 bg-no-repeat bg-contain block h-[18px] w-[18px];                      
+}             
+.newsletterform .newsletterform__inputelement {
+    @apply lg:w-[calc(100%_-_200px)] sm:w-[calc(100%_-_200px)] w-full;     
+}         
+.newsletterform .newsletterform__inputelement input {
+    @apply border-0 outline-none pl-10 lg:text-16 lg:leading-22 text-14 leading-20 font-Inter font-400 text-Black w-full;                                      
+}                                              
+.newsletterform .newsletterform__inputelement input::placeholder {
+    @apply opacity-50;                        
+}
+.newsletterform .newsletterform__btn input[type=submit] {
+    @apply lg:py-15 py-8 lg:px-25 sm:px-20 px-10 bg-Orange hover:bg-Black transition-all duration-500 ease-in-out flex items-center gap-x-[10px] lg:text-[15px] lg:leading-[20px] text-14 leading-20 font-700 font-Poppins text-White sm:border-[3px] border-[1px] border-solid border-White cursor-pointer h-full smscreen2:mx-auto;                                                     
+}                                        
+.newsletterform .newsletterform__btn {
+    @apply relative;
+}
+.newsletterform .newsletterform__btn::after {
+    @apply content-[''] absolute top-[-2px] right-[-2px] w-[12px] h-[12px] border-0 border-solid border-Black border-t-[3px] border-r-[3px] z-1;
+}                                                   
+/* Newsletter End */
+
+/* FAQs Start */
+.faqs-wrapper .accordion-container .accordion-title h4 {
+    @apply text-Black font-Poppins text-16 leading-22 lg:text-22 lg:leading-[36px] font-600 pr-20 sm:pr-25;                                     
+}                    
+.faqs-wrapper .accordion-container .accordion-row.open .accordion-title h4 {
+    @apply text-Orange;  
+}
+.faqs-wrapper .accordion-container .accordion-title {
+    @apply cursor-pointer;         
+}
+.faqs-wrapper .accordion-container .accordion-row.open .accordion-title__plusicon {
+    @apply hidden;
+}
+.faqs-wrapper .accordion-container .accordion-row.open .accordion-title__minusicon {
+    @apply block;     
+}
+.faqs-wrapper .accordion-container .accordion-row .accordion-title__plusicon span,
+.faqs-wrapper .accordion-container .accordion-row .accordion-title__minusicon span {
+    @apply lg:w-[35px] w-[28px] lg:h-[35px] h-[28px] bg-Orange flex items-center justify-center;           
+}
+.faqs-wrapper .accordion-container .accordion-row .accordion-title__plusicon span img,
+.faqs-wrapper .accordion-container .accordion-row .accordion-title__minusicon span img {
+    @apply lg:max-w-[16px] max-w-[12px] object-contain;      
+}               
+.faqs-wrapper .accordion-container .accordion-row.open .accordion-content {
+    @apply block;
+}
+.faqs-wrapper .accordion-container .accordion-row .accordion-content {
+    @apply hidden lg:px-40 px-20 lg:py-28 py-20 !pt-0;                    
+}     
+.faqs-wrapper .accordion-container .accordion-row .accordion-content p {
+    @apply text-Black text-opacity-75 text-[17px] leading-[1.5] font-400 tracking-20 not-italic relative block mb-20 last:mb-0;
+}
+.faqs-wrapper .accordion-container .accordion-row .accordion-content p a {
+    @apply font-700 transition-all duration-500 ease-in-out text-Orange hover:text-Font no-underline;         
+} 
+.faqs-wrapper .accordion-container .accordion-row:not(:last-child) {
+    @apply mb-15;          
+} 
+.faqs-wrapper .accordion-title {
+    @apply lg:py-25 py-20 lg:px-28 px-20;                     
+}                
+.faqs-wrapper .accordion-container .accordion-row {
+    @apply border-2 border-solid border-[#e1e1e1] shadow-faqs__shadow bg-White;                        
+}          
+.faqs-wrapper .accordion-container .accordion-row.open {
+    @apply border-Orange;       
+}              
+/* FAQs End */
 
 }
 

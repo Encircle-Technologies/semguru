@@ -111,10 +111,10 @@ $(document).ready(function ($) {
             slidesPerView: 3,
             spaceBetween: 20,
             speed: 2000,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             navigation: {
                 nextEl: ".blog-next",
                 prevEl: ".blog-prev",
@@ -269,18 +269,53 @@ $(document).ready(function ($) {
     if ($('.testimonialctm__main').length) {
         var testimonialslider = new Swiper(".testimonial_slider", {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 0,
             speed: 2000,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             navigation: {
                 nextEl: ".testimonial_next",
                 prevEl: ".testimonial_prev",
             },         
         });
     }
+
+    // FAQs
+    if ($(".faqs-wrapper").length) {
+        $(function () {
+            var Accordion = function (el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+
+                var links = this.el.find('.accordion-title');
+                links.on('click', {
+                    el: this.el,
+                    multiple: this.multiple
+                }, this.dropdown)
+            }
+
+            Accordion.prototype.dropdown = function (e) {
+                var $el = e.data.el;
+                var $this = $(this),
+                    $next = $this.next();
+
+                $next.slideToggle();
+                $this.parent().toggleClass('open');
+
+                if (!e.data.multiple) {
+                    $el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
+                };
+            }
+            var accordion = new Accordion($('.accordion-container'), false);
+        });
+        $(document).on('click', function (event) {
+            if (!$(event.target).closest('#accordion').length) {
+                $this.parent().toggleClass('open');
+            }
+        });  
+    }    
     
 });
 
