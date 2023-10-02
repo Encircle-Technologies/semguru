@@ -199,7 +199,7 @@ body::-webkit-scrollbar-thumb,
     @apply flex flex-row items-center text-Orange text-16 leading-[24px] font-Poppins font-500 tracking-10 capitalize m-0 p-0 relative duration-300 delay-150 ease-linear;
   }
   .btn-link-ico img {
-    @apply -mt-3 ml-8 duration-300 delay-150 ease-linear
+    @apply -mt-3 mx-8 duration-300 delay-150 ease-linear
   }
   .btn-link-ico:hover img {
     @apply ml-[12px]
@@ -408,6 +408,9 @@ body::-webkit-scrollbar-thumb,
   }
   .divider-center:before {
     @apply left-50_per translate-x-minus_50;
+  }
+  .social-ico {
+    @apply opacity-0 duration-300 delay-150 ease-linear;
   }
 }
 
@@ -854,6 +857,12 @@ body::-webkit-scrollbar-thumb,
   .getin-wrapper .landscape img {
     @apply lg:absolute lg:top-0 lg:left-0;
   }
+  .getin-wrapper.small .landscape {
+    @apply block relative overflow-hidden w-full lg:pt-[84.76%];
+  }
+  .getin-wrapper.small .landscape img {
+    @apply lg:absolute lg:top-0 lg:left-0;
+  }
   /* Get in touch End */
 
   /* Footer Start */
@@ -987,12 +996,16 @@ body::-webkit-scrollbar-thumb,
   }
 
   .personal-wrapper .resultcard .num,
-  .personal-wrapper .resultcard .num span {
+  .personal-wrapper .resultcard .num span,
+  .contentsTab-wrapper .resultcard .num,
+  .contentsTab-wrapper .resultcard .num span {
     @apply font-Poppins font-600 text-Orange text-[17px] lg:text-[35px] lg:leading-[1] leading-[120%] m-0 p-0
   }
-  .personal-wrapper .resultcard .content p {
+  .personal-wrapper .resultcard .content p,
+  .contentsTab-wrapper .resultcard .content p {
     @apply text-14
   }
+
   /* Result End */
 
   /* Step list Start */

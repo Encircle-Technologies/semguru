@@ -371,7 +371,7 @@
 .services_content h4,
 .services_content h5,
 .services_content h6 {
-    @apply xxl:mb-35 lg:mb-25 mb-15;     
+    @apply xxl:mb-35 lg:mb-25 mb-15 text-Black text-opacity-80;                     
 }
 .services_content h3 {
     @apply text-[32px] lg:text-[42px] lg:leading-[55px] leading-[42px];    

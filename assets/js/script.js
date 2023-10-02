@@ -170,7 +170,7 @@ $(document).ready(function ($) {
             $($(this).attr('href')).show();
         });
     }
-    if ($('.result-wrapper, .personal-wrapper').length) {        
+    if ($('.result-wrapper, .personal-wrapper, .contentsTab-wrapper').length) {        
         $(window).scroll(function() {
         var counted = 0;
         var oTop = $('.resultcard').offset().top - window.innerHeight;
@@ -186,7 +186,7 @@ $(document).ready(function ($) {
 
                     {
 
-                    duration: 500,
+                    duration: 5000,
                     easing: 'swing',
                     step: function() {
                         $this.text(Math.floor(this.countNum));
@@ -261,7 +261,7 @@ $(document).ready(function ($) {
 
         btn.on('click', function(e) {
             e.preventDefault();
-            $('html, body').animate({scrollTop:0}, '500');
+            $('html, body').animate({scrollTop:0}, '800');
         });
     }
 
@@ -283,40 +283,67 @@ $(document).ready(function ($) {
     }
 
     // FAQs
-    if ($(".faqs-wrapper").length) {
-        $(function () {
-            var Accordion = function (el, multiple) {
-                this.el = el || {};
-                this.multiple = multiple || false;
-
-                var links = this.el.find('.accordion-title');
-                links.on('click', {
-                    el: this.el,
-                    multiple: this.multiple
-                }, this.dropdown)
-            }
-
-            Accordion.prototype.dropdown = function (e) {
-                var $el = e.data.el;
-                var $this = $(this),
-                    $next = $this.next();
-
-                $next.slideToggle();
-                $this.parent().toggleClass('open');
-
-                if (!e.data.multiple) {
-                    $el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
-                };
-            }
-            var accordion = new Accordion($('.accordion-container'), false);
-        });
-        $(document).on('click', function (event) {
-            if (!$(event.target).closest('#accordion').length) {
-                $this.parent().toggleClass('open');
-            }
-        });  
-    }    
+    $(document).ready(function() {
+        if ($(".faqs-wrapper").length) {
+            $(function () {
+                var Accordion = function (el, multiple) {
+                    this.el = el || {};
+                    this.multiple = multiple || false;
     
+                    var links = this.el.find('.accordion-title');
+                    links.on('click', {
+                        el: this.el,
+                        multiple: this.multiple
+                    }, this.dropdown)
+                }
+    
+                Accordion.prototype.dropdown = function (e) {
+                    var $el = e.data.el;
+                    var $next = $(this).next();
+    
+                    $next.slideToggle();
+                    $(this).parent().toggleClass('open');
+    
+                    if (!e.data.multiple) {
+                        $el.find('.accordion-content').not($next).slideUp().parent().removeClass('open');
+                    };
+                }
+                var accordion = new Accordion($('.accordion-container'), false);
+            });
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('#accordion').length) {
+                    $(this).parent().toggleClass('open');
+                }
+            });  
+        }    
+    });   
+
+    // Navigation click
+    if ($('.contentsTab-wrapper').length) {
+        var tb = $('a[href="#tab0"]');
+        tb.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '800');
+        });
+        (function ($) {
+            $(".contentsTab-wrapper .card .content-list a").on('click', function () {
+                if (this.hash != "") {
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 180
+                    }, 800);
+                }
+            });  
+        })(jQuery);    
+        $('.share-txt').on('click', function () {
+            if ($('.social-ico').css('opacity') == 0) {
+                $('.social-ico').css('opacity', 1);
+            }
+            else {
+                $('.social-ico').css('opacity', 0);
+            }
+        });
+    }
 });
 
 
@@ -394,5 +421,3 @@ $(document).ready(function ($) {
 
 })($);
 // Responsive menu end
-
-
